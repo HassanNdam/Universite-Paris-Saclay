@@ -7,7 +7,7 @@
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4 titre-footer">
-            </i>Université PARIS-SACLAY 
+            </i>PARIS-SACLAY 
           </h6>
           <a href="https://www.universite-paris-saclay.fr/" target="_blank">
             <img class ="img-fluid mt-2"src="<?php echo (get_template_directory_uri() . '/assets/logo/logo-ups-white_1.svg') ?>" alt="Logo Université PARIS-SACLAY">

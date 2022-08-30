@@ -23,12 +23,21 @@ body {
 
 /* Header Bouton & Queries  */
 
+
+.btn-primary:hover{
+    background-color: #312336;
+}
+
 .btn {
     background-color: #8B1B59;
     color: #ffffff;
     border: none;
     border-radius: 0;
     padding: 0.7em;
+}
+
+.espace-buton-center{
+    margin-top: 0.094em;
 }
 
 .btn:hover{
@@ -39,7 +48,16 @@ body {
     background-color: #ffffff;
     border: #8B1B59 solid 2px;
     color:  #8B1B59;
-    margin-right: 1rem
+    margin-right: 1rem; 
+    transition: .8ms all;
+}
+
+.mobilite-btn:hover{
+    background-color: #8B1B59;
+    color: #ffffff;
+    border: #ffffff solid 2px;
+    transition: .8ms all;
+    
 }
 
 

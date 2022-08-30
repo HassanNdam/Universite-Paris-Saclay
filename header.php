@@ -13,17 +13,17 @@
 </head>
 <body>
 
-<header class="site-header bg-light shadow-sm ">
-    <nav class="navbar navbar-default navbar-expand d-flex container flex-column flex-md-row justify-content-between py-3">
+<header class="site-header">
+    <nav class="navbar navbar-default navbar-expand d-flex container-xxl flex-column flex-md-row justify-content-between py-3">
         <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>" >
             <img src="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>" alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid"> 
         </a>
     <div class="d-flex">
         <a href="#" target="_blank">
-            <button type="button" class="btn btn-primary mobilite-btn" onclick="this.blur();">Mobilité interne</button>
+            <button type="button" class="btn mobilite-btn" onclick="this.blur();">Mobilité interne</button>
         </a>
         <a href="#" target="_blank">
-            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature spontanée</button>
+            <button type="button" class="btn btn-primary espace-buton-center" onclick="this.blur();">Candidature spontanée</button>
         </a>
     </div>
     </nav>

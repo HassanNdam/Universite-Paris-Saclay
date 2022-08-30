@@ -39,19 +39,6 @@ function saclay_style(){
 add_action('wp_enqueue_scripts', 'saclay_style');
 
 
-function reinitialiser(){
-
-    if($_GET){
-        if((isset($_GET['s'])) or isset($_GET['location']) or isset(($_GET['activite']))){
-            ?>
-            <a href="<?php echo get_site_url(); ?>" class="mt-5">
-                Actualiser <i class="fas fa-sync fa-sync"></i>
-            </a>
-            <?php
-        }
-}
-}
-
 
 if ( ! function_exists ( 'pagination_post_nav' ) ) {
 	function pagination_post_nav() {
