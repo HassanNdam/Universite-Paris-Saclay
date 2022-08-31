@@ -3,11 +3,7 @@
 
 get_header(); 
 
-?>
-
-
-
-<?php 
+get_template_part("template-part/front",'post' ); 
 
 get_footer(); 
 
