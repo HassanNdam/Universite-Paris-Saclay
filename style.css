@@ -64,13 +64,38 @@ body {
 /* Header image & Queries  */
   
 .header-image{
-    background:url(assets/images/university-header.jpg);
+    background:url(assets/images/general2.jpg);
     height:350px ;
+    background-position: center;
 }
 
 
 /* Moteur de recherche  & Queries */
 
+
+
+
+
+/* Bloc text nombres postes & Queries */
+
+
+
+
+
+/* Bloc offres d'emploi & Queries */
+
+
+.couleur1{
+    background-color: #8B1B59;
+}
+
+.couleur2{
+    background-color: #224667;
+}
+
+.couleur3{
+    background-color: #646464;
+}
 
 
 

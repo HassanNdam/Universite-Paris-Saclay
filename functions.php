@@ -3,82 +3,98 @@
 
 //Limitation excerpt POST
 
-function wpdocs_custom_excerpt_length( $length ) {
+function wpdocs_custom_excerpt_length($length)
+{
     return 25;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 
 
 
 // Retrait de [] dans excerpt
 
-function wpdocs_excerpt_more( $more ) {
+function wpdocs_excerpt_more($more)
+{
     return '...';
 }
-add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+add_filter('excerpt_more', 'wpdocs_excerpt_more');
 
 
 
-function saclay_support(){
-    add_theme_support('title-tag'); 
+function saclay_support()
+{
+    add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support("post-thumbnails");
 }
 
-add_action('after_setup_theme','saclay_support');
+add_action('after_setup_theme', 'saclay_support');
 
-function saclay_style(){
-
-    wp_enqueue_style( 'my-custom-style', get_template_directory_uri() . '/style.css', array('ms-bootstrap'), time() );
-    wp_enqueue_style('ms-bootstrap',"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", array(), 
-    '5.1.3', 'All');
-    wp_enqueue_style('ms-font',"https://use.fontawesome.com/releases/v5.7.0/css/all.css", array(), 
-    '5.7.0', 'All');
-
+function saclay_style()
+{
+    wp_enqueue_style('my-custom-style', get_template_directory_uri() . '/style.css', array('ms-bootstrap'), time());
+    wp_enqueue_style(
+        'ms-bootstrap',
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
+        array(),
+        '5.1.3',
+        'All'
+    );
+    wp_enqueue_style(
+        'ms-font',
+        "https://use.fontawesome.com/releases/v5.7.0/css/all.css",
+        array(),
+        '5.7.0',
+        'All'
+    );
 }
 add_action('wp_enqueue_scripts', 'saclay_style');
 
 
 
-if ( ! function_exists ( 'pagination_post_nav' ) ) {
-	function pagination_post_nav() {
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-		$next     = get_adjacent_post( false, '', false );
+if (! function_exists('pagination_post_nav')) {
+    function pagination_post_nav()
+    {
+        $previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
+        $next     = get_adjacent_post(false, '', false);
 
-		if ( ! $next && ! $previous ) {
-			return;
-		}
-		?>
+        if (! $next && ! $previous) {
+            return;
+        }
+        ?>
 				<nav class="container navigation post-navigation">
 					<div class="row nav-links justify-content-between">
 						<?php
 
-							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', '<' );
-							}
-							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>',     '>');
-							}
-						?>
+                            if (get_previous_post_link()) {
+                                previous_post_link('<span class="nav-previous">%link</span>', '<');
+                            }
+                            if (get_next_post_link()) {
+                                next_post_link('<span class="nav-next">%link</span>', '>');
+                            }
+        ?>
 					</div>
 				</nav>
 
 		<?php
-	}
+    }
 }
 
-if ( ! function_exists ( 'pagination_post' ) ) {
-	function pagination_post( $args = array(), $class = 'pagination' ) {
-        if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
-		$args = wp_parse_args( $args, array(
-			'mid_size'           => 2,
-			'prev_next'          => true,
-			'prev_text'          => __('&laquo;'),
-			'next_text'          => __('&raquo;'),
-			'screen_reader_text' => __('Posts navigation'),
-			'type'               => 'array',
-			'current'            => max( 1, get_query_var('paged') ),
-		) );
+if (! function_exists('pagination_post')) {
+    function pagination_post($args = array(), $class = 'pagination')
+    {
+        if ($GLOBALS['wp_query']->max_num_pages <= 1) {
+            return;
+        }
+        $args = wp_parse_args($args, array(
+            'mid_size'           => 2,
+            'prev_next'          => true,
+            'prev_text'          => __('&laquo;'),
+            'next_text'          => __('&raquo;'),
+            'screen_reader_text' => __('Posts navigation'),
+            'type'               => 'array',
+            'current'            => max(1, get_query_var('paged')),
+        ));
         $links = paginate_links($args);
         ?>
 
@@ -87,11 +103,11 @@ if ( ! function_exists ( 'pagination_post' ) ) {
             <ul class="pagination">
 
                 <?php
-                    foreach ( $links as $key => $link ) { ?>
+                    foreach ($links as $key => $link) { ?>
 
-                        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
+                        <li class="page-item <?php echo strpos($link, 'current') ? 'active' : '' ?>">
 
-                            <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+                            <?php echo str_replace('page-numbers', 'page-link', $link); ?>
 
                         </li>
 
@@ -118,4 +134,19 @@ function replace_text_wps($text)
     $text = str_replace(array_keys($replace), $replace, $text);
 
     return $text;
+}
+
+
+function change_couleur_categorie($couleur_category)
+{
+    if ($couleur_category == "Cat A : cadres") {
+        echo "<div class=\"col-md-12 p-3 border-1 text-white couleur1\">$couleur_category</div>";
+    } elseif ($couleur_category == "Cat B : techniciens et encadrement intermédiaire") {
+        echo "<div class=\"col-md-12 p-3 border-1 text-white couleur2\">$couleur_category</div>";
+        ;
+    } elseif ($couleur_category == "Cat C : fonctions d'exécution") {
+        echo "<div class=\"col-md-12 p-3 border-1 text-white couleur3 \">$couleur_category</div>";
+    } else {
+        echo "Val défaut";
+    }
 }
