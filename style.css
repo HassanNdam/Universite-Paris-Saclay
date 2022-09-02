@@ -75,22 +75,27 @@ RVB: 246, 246, 246
 }
 
 
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+::selection{
+    color: #ffffff;
+    background-color: #312336;
 }
 
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "";
+    font-family: "OpenSansSemiBold";
 
 }
 
 h1{
-
+    font-family: "OpenSansBold";
 }
 
 h2{
