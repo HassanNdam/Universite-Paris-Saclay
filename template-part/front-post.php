@@ -44,14 +44,22 @@ $post_number = $myquery -> found_posts;
 						 <!-- Affichage des posts -->
 						
                          <div class="container mt-5">
-                            <div class="row ">
+                            <div class="row">
                                         
                                         <?= change_couleur_categorie($jobcategory);?>
 
                                     <div class="col-md-12 p-3 border bg-light">
                                         
-                                        <?= the_title_attribute(); ?>
+                                        <?= the_title_attribute(); 
+                                        
+                                        ?>
 
+
+                                        <i class="fas fa-city"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <i class="fa-sharp fa-solid fa-address-card"></i>
+                                        <i class="fa-solid fa-code-branch"></i>
+                                        
                                     </div>
                             </div>
                         </div> 

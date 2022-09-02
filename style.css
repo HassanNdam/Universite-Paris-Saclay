@@ -2,10 +2,47 @@
 Theme name : Université Paris-Saclay  by Paradisiak
 Version : 1.0
 
-Couleur 1 : #8B1B59
-Couleur red Footer : #312336
+Violet clair : #8B1B59
+RVB: 139, 27, 89
+
+Violet foncé : #312336
+RVB: 49, 35, 54
+
+#7C8091
+RVB: 124, 128, 145
+
+#646464
+RVB: 100, 100, 100
+
+
+#D7D7D7
+RVB: 215, 215, 215
+
+Bleue foncé : #224667
+RVB: 34, 70, 103
+
+Vert #646464
+RVB: 31, 88, 98
+
+#F9F5F7
+RVB: 249, 245, 247
+
+#F6F6F6
+RVB: 246, 246, 246
 
 */
+
+/* Intégration des polices OpenSans */
+
+@font-face{
+    font-family: "OpenSansItalic";
+    src: url(assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttfZZ);
+}
+
+@font-face{
+    font-family: "";
+    src: url(assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttfZZ);
+}
 
 
 
@@ -19,6 +56,8 @@ Couleur red Footer : #312336
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Open';
+
 }
 
 /* Header Bouton & Queries  */
