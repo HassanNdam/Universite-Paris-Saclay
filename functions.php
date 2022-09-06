@@ -158,15 +158,15 @@ function replace_text_wps($text)
 }
 
 
-function change_couleur_categorie($couleur_category)
+function change_icone_categorie($icone_category)
 {
-    if ($couleur_category == "Cat A : cadres") {
-        echo "<div class=\"col-md-12 p-2 border-1 text-white couleur1\">$couleur_category</div>";
-    } elseif ($couleur_category == "Cat B : techniciens et encadrement intermédiaire") {
-        echo "<div class=\"col-md-12 p-2 border-1 text-white couleur2\">$couleur_category</div>";
+    if ($icone_category == "Cat A : cadres") {
+        echo "<i class=\"fa-sharp fa-solid fa-address-card \"></i>";
+    } elseif ($icone_category == "Cat B : techniciens et encadrement intermédiaire") {
+        echo "<i class=\"fa-solid fa-briefcase\"></i>";
         ;
-    } elseif ($couleur_category == "Cat C : fonctions d'exécution") {
-        echo "<div class=\"col-md-12 p-2 border-1 text-white couleur3 \">$couleur_category</div>";
+    } elseif ($icone_category == "Cat C : fonctions d'exécution") {
+        echo "<i class=\"fa-solid fa-calendar-days\"></i>";
     } else {
         echo "Val défaut";
     }

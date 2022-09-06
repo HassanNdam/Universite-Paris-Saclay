@@ -48,7 +48,7 @@ foreach ($myposts as $post) : setup_postdata($post);
     $jobbody = get_post_custom_values('job_boby')[0];
     $jobbranch = get_post_custom_values('jobbranch');
 
-    $post_title = get_the_title($post); 
+    $post_title = get_the_title($post);
 
     ?>
 
@@ -57,18 +57,18 @@ foreach ($myposts as $post) : setup_postdata($post);
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 
                     <?php changement_couleur_permutation($post_number, $post_title);?>
-                    <div class="col-md-3 p-4 border">
-                            DD
+                    <div class="col-md-1 p-4 border">
+                        <?php change_icone_categorie($jobcategory); ?>
                     </div>
-                    <div class="col-md-7 p-4  flex-column position-static ">
+                    <div class="col-md-8 p-4 flex-column position-static ">
 
-                        <div class="mb-3 text-muted">
+                        <div class="mb-3 text-muted fst-italic">
                             Publié le <?php echo get_the_date(); ?>
                         </div>
 
-                        <?= ' ' . $jobcontract;?>
+                        <?php echo $jobcontract; ?>
                     </div>
-                    <div class="col-md-2 align-self-center justify-conten-center">
+                    <div class="col-md-3 align-self-center justify-conten-center">
                         <a href="">
                             <button type="submit" class="btn btn-primary btn-offre">Voir l'offre</button>
                         </a>

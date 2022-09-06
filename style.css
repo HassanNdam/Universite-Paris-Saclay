@@ -152,10 +152,6 @@ h6 {}
 
 }
 
-.btn-dark {
-    color: #ffffff;
-    background-color: #224667;
-}
 
 
 /* Header image & Queries  */
@@ -169,6 +165,10 @@ h6 {}
 
 /* Moteur de recherche  & Queries */
 
+.btn-dark {
+    color: #ffffff;
+    background-color: #224667;
+}
 
 
 
@@ -203,13 +203,20 @@ h6 {}
 
 }
 
-.btn-offre:hover{
+.btn-offre:hover {
     background-color: #ffffff;
     border: #8B1B59 solid 2px;
     color: #000000;
     margin-right: 1rem;
     transition: .8ms all;
 }
+
+
+.fa-calendar-days, .fa-address-card, .fa-briefcase  {
+    font-size: 40px;
+    color: #224667;
+}
+
 
 
 /* Footer & Queries */
