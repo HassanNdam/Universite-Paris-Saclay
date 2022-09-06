@@ -41,24 +41,31 @@ $post_number = $myquery -> found_posts;
 $myposts = get_posts($args);
 
 foreach ($myposts as $post) : setup_postdata($post);
-
+    $post_number2 = 0;
     $jobcontract = get_post_custom_values('job_contract')[0];
     $joblocation = get_post_custom_values('job_location')[0];
     $jobcategory = get_post_custom_values('job_category')[0];
     $jobbody = get_post_custom_values('job_boby')[0];
     $jobbranch = get_post_custom_values('jobbranch');
+
+    $post_title = get_the_title($post); 
+
     ?>
 
             <div class="row mb-2">
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <?= change_couleur_categorie($jobcategory);?>
-                    <div class="col p-4  flex-column position-static ">
+
+                    <?php changement_couleur_permutation($post_number, $post_title);?>
+                    <div class="col-md-3 p-4 border">
+                            DD
+                    </div>
+                    <div class="col-md-7 p-4  flex-column position-static ">
 
                         <div class="mb-3 text-muted">
                             Publié le <?php echo get_the_date(); ?>
                         </div>
-                        <h3 class="mb-2"><?php the_title(); ?></h3>
+
                         <?= ' ' . $jobcontract;?>
                     </div>
                     <div class="col-md-2 align-self-center justify-conten-center">
@@ -70,7 +77,7 @@ foreach ($myposts as $post) : setup_postdata($post);
             </div>
 
 
-            <?php endforeach;
+            <?php $post_number++ ; endforeach;
 wp_reset_postdata(); ?>
 
         </div>

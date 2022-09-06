@@ -143,7 +143,7 @@ if (! function_exists('pagination_post')) {
 }
 
 
-// Fonction remplacement du texte dans l'offre 
+// Fonction remplacement du texte dans l'offre
 
 
 function replace_text_wps($text)
@@ -169,5 +169,14 @@ function change_couleur_categorie($couleur_category)
         echo "<div class=\"col-md-12 p-2 border-1 text-white couleur3 \">$couleur_category</div>";
     } else {
         echo "Val défaut";
+    }
+}
+
+function changement_couleur_permutation(int $color_change_post, string $post_title)
+{
+    if ($color_change_post % 2 == 0) {
+        echo "<div class=\"col-md-12 p-3 text-white couleur1\">$post_title</div>";
+    } elseif ($color_change_post % 2 > 0) {
+        echo "<div class=\"col-md-12 p-3 s text-white couleur2 \">$post_title</div>";
     }
 }
