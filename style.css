@@ -40,7 +40,7 @@ RVB: 246, 246, 246
 }
 
 @font-face {
-    font-family:"OpenSansBoldItalic" ;
+    font-family: "OpenSansBoldItalic";
     src: url(assets/font/static/OpenSans/OpenSans-BoldItalic.ttf);
 }
 
@@ -70,18 +70,18 @@ RVB: 246, 246, 246
 }
 
 @font-face {
-    font-family:"OpenSansSemiBoldItalic" ;
+    font-family: "OpenSansSemiBoldItalic";
     src: url(assets/font/static/OpenSans/OpenSans-SemiBoldItalic.ttf);
 }
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-::selection{
+::selection {
     color: #ffffff;
     background-color: #312336;
 }
@@ -94,29 +94,19 @@ body {
 
 }
 
-h1{
+h1 {
     font-family: "OpenSansBold";
 }
 
-h2{
-    
-}
+h2 {}
 
-h3{
-    
-}
+h3 {}
 
-h4{
-    
-}
+h4 {}
 
-h5{
-    
-}
+h5 {}
 
-h6{
-    
-}
+h6 {}
 
 
 
@@ -124,7 +114,7 @@ h6{
 /* Header Bouton & Queries  */
 
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: #312336;
 }
 
@@ -136,36 +126,43 @@ h6{
     padding: 0.7em;
 }
 
-.espace-buton-center{
+.espace-buton-center {
     margin-top: 0.094em;
 }
 
-.btn:hover{
-   transition: 0.5ms all;
+.btn:hover {
+    transition: 0.5ms all;
 }
 
-.mobilite-btn{
+.mobilite-btn {
     background-color: #ffffff;
     border: #8B1B59 solid 2px;
-    color:  #8B1B59;
-    margin-right: 1rem; 
+    color: #8B1B59;
+    margin-right: 1rem;
     transition: .8ms all;
 }
 
-.mobilite-btn:hover{
+
+
+.mobilite-btn:hover {
     background-color: #8B1B59;
     color: #ffffff;
     border: #ffffff solid 2px;
     transition: .8ms all;
-    
+
+}
+
+.btn-dark {
+    color: #ffffff;
+    background-color: black;
 }
 
 
 /* Header image & Queries  */
-  
-.header-image{
-    background:url(assets/images/general2.jpg);
-    height:350px ;
+
+.header-image {
+    background: url(assets/images/general2.jpg);
+    height: 350px;
     background-position: center;
 }
 
@@ -185,56 +182,75 @@ h6{
 /* Bloc offres d'emploi & Queries */
 
 
-.couleur1{
+.couleur1 {
     background-color: #8B1B59;
 }
 
-.couleur2{
+.couleur2 {
     background-color: #224667;
 }
 
-.couleur3{
-    background-color: #646464;
+.couleur3 {
+    background-color: #312336;
 }
 
+.btn-offre {
+    background-color: #ffffff;
+    border: #8B1B59 solid 2px;
+    color: #8B1B59;
+    margin-right: 1rem;
+    transition: .8ms all;
+
+}
+
+.btn-offre:hover{
+    background-color: #ffffff;
+    border: #8B1B59 solid 2px;
+    color: #000000;
+    margin-right: 1rem;
+    transition: .8ms all;
+}
 
 
 /* Footer & Queries */
 
 
-footer{
+footer {
     background-color: #312336;
     color: white;
     font-size: 1.1em;
 }
 
-footer .titre-footer{
+footer .titre-footer {
     font-size: 1.3em;
 }
 
-footer a{
+footer a {
     text-decoration: none;
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
 }
 
-.texte-univ{
+.texte-univ {
     font-weight: 700;
 }
 
-footer .fa-brands{
+footer .fa-brands {
     font-size: 2em;
     padding: 0.2em;
 }
 
-footer a .fa-brands{
+footer a .fa-brands {
     color: #ffffff;
     transition: 0.3s all;
 }
 
-footer a .fa-brands:hover{
+footer a .fa-brands:hover {
     color: #8B1B59;
     transition: 0.3s all;
 }
+
+
+/* Css Cookies & Media Query */

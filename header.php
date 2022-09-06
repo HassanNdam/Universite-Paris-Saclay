@@ -13,7 +13,7 @@
 <body>
 
 <header class="site-header">
-    <nav class="navbar navbar-default navbar-expand d-flex container-xxl flex-column flex-md-row justify-content-between py-3">
+    <nav class="container navbar navbar-default navbar-expand d-flex  flex-column flex-md-row justify-content-between py-3">
         <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>" >
             <img src="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>" alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid"> 
         </a>

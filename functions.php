@@ -161,12 +161,12 @@ function replace_text_wps($text)
 function change_couleur_categorie($couleur_category)
 {
     if ($couleur_category == "Cat A : cadres") {
-        echo "<div class=\"col-md-12 p-3 border-1 text-white couleur1\">$couleur_category</div>";
+        echo "<div class=\"col-md-12 p-2 border-1 text-white couleur1\">$couleur_category</div>";
     } elseif ($couleur_category == "Cat B : techniciens et encadrement intermédiaire") {
-        echo "<div class=\"col-md-12 p-3 border-1 text-white couleur2\">$couleur_category</div>";
+        echo "<div class=\"col-md-12 p-2 border-1 text-white couleur2\">$couleur_category</div>";
         ;
     } elseif ($couleur_category == "Cat C : fonctions d'exécution") {
-        echo "<div class=\"col-md-12 p-3 border-1 text-white couleur3 \">$couleur_category</div>";
+        echo "<div class=\"col-md-12 p-2 border-1 text-white couleur3 \">$couleur_category</div>";
     } else {
         echo "Val défaut";
     }

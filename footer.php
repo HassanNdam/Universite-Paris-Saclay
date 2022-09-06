@@ -49,7 +49,7 @@
 
       </div>
 
-      <p class="texte-univ mb-4">L'Université Paris-Saclay est membre des réseaux LERU, CESAER et EUA</p> 
+      <p class="texte-univ mb-4 fst-italic">L'Université Paris-Saclay est membre des réseaux LERU, CESAER et EUA</p> 
 
     </div>
 </section>
