@@ -83,9 +83,9 @@ if (! function_exists('pagination_post_nav')) {
             return;
         }
         ?>
-				<nav class="container navigation post-navigation">
-					<div class="row nav-links justify-content-between">
-						<?php
+<nav class="container navigation post-navigation">
+    <div class="row nav-links justify-content-between">
+        <?php
 
                             if (get_previous_post_link()) {
                                 previous_post_link('<span class="nav-previous">%link</span>', '<');
@@ -94,10 +94,10 @@ if (! function_exists('pagination_post_nav')) {
                                 next_post_link('<span class="nav-next">%link</span>', '>');
                             }
         ?>
-					</div>
-				</nav>
+    </div>
+</nav>
 
-		<?php
+<?php
     }
 }
 
@@ -119,26 +119,26 @@ if (! function_exists('pagination_post')) {
         $links = paginate_links($args);
         ?>
 
-        <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-            <ul class="pagination">
-
-                <?php
-                    foreach ($links as $key => $link) { ?>
-
-                        <li class="page-item <?php echo strpos($link, 'current') ? 'active' : '' ?>">
-
-                            <?php echo str_replace('page-numbers', 'page-link', $link); ?>
-
-                        </li>
-
-                <?php } ?>
-
-            </ul>
-
-        </nav>
+    <ul class="pagination">
 
         <?php
+                    foreach ($links as $key => $link) { ?>
+
+        <li class="page-item <?php echo strpos($link, 'current') ? 'active' : '' ?>">
+
+            <?php echo str_replace('page-numbers', 'page-link', $link); ?>
+
+        </li>
+
+        <?php } ?>
+
+    </ul>
+
+</nav>
+
+<?php
     }
 }
 
@@ -165,7 +165,6 @@ function change_icone_categorie($icone_category)
         echo "<i class=\"fa-sharp fa-solid fa-address-card \"></i>";
     } elseif ($icone_category == "Cat B : techniciens et encadrement intermédiaire") {
         echo "<i class=\"fa-solid fa-briefcase\"></i>";
-        ;
     } elseif ($icone_category == "Cat C : fonctions d'exécution") {
         echo "<i class=\"fa-solid fa-calendar-days\"></i>";
     } else {
@@ -179,5 +178,33 @@ function changement_couleur_permutation(int $color_change_post, string $post_tit
         echo "<div class=\"col-md-12 p-3 text-white couleur1\">$post_title</div>";
     } elseif ($color_change_post % 2 > 0) {
         echo "<div class=\"col-md-12 p-3 s text-white couleur2 \">$post_title</div>";
+    }
+}
+
+
+// Function to display image according to categories
+
+function image_post_change($image_categorie)
+{
+    if ($image_categorie == "Cat A : cadres") {
+        ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/General.jpg'; ?>" alt="Image affichage poste"
+    class="img-fluid">
+<?php
+    } elseif ($image_categorie == "Cat B : techniciens et encadrement intermédiaire") {
+        ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau.jpg'; ?>" alt="Image affichage poste"
+    class="img-fluid">
+<?php
+    } elseif ($image_categorie == "Cat C : fonctions d'exécution") {
+        ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Le-Kremlin-Bicetre.jpg'; ?>"
+    alt="Image affichage poste" class="img-fluid">
+<?php
+    } else {
+        ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/General.jpg'; ?>" alt="Image affichage poste"
+    class="img-fluid">
+<?php
     }
 }

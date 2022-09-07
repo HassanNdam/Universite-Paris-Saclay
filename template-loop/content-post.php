@@ -8,16 +8,6 @@ $jobbranch = get_post_custom_values('job_branch')[0];
 
 ?>
 
-<!-- <div class="position-relative">
-    <div class="position-absolute top-50 start-50 translate-middle text-center bloc-detail-offre">
-            <div class="row g-5">
-                    <h1>1</h1>
-                    <h1>1</h1>
-                    <h1>1</h1>
-            </div>
-    </div>
-</div> -->
-
 
 <!-- Fil d'ariane  -->
 
@@ -61,10 +51,12 @@ $jobbranch = get_post_custom_values('job_branch')[0];
 
         <div class="col-md-4 text-center box-shadow-lg">
             <h1 class="mb-5 mt-4 post-details">Détails de l'offre : </h1>
+            <div class="row">
+                   
+            </div>
             <div class="position-sticky" style="top: 2rem;">
                 <div class="row">
-                    <img src="<?php echo get_template_directory_uri(). '/assets/images/General.jpg'; ?>"
-                        alt="Image affichage poste" class="img-fluid rounded-3">
+                   <?php image_post_change($jobcategory) ; ?>
 
 
                     <a href="<?php the_permalink(); ?>" class="mt-5">
