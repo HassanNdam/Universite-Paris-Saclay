@@ -151,6 +151,7 @@ function replace_text_wps($text)
     $replace = array(
         '<h3>Entreprise</h3>' => '<h3>Employeur</h3>',
         '<h3>Poste</h3>' => '<h3>Mission</h3>',
+        '<h3>Profil</h3>' => '<h3>Profil</h3>',
     );
     $text = str_replace(array_keys($replace), $replace, $text);
 
