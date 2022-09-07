@@ -3,8 +3,9 @@
 $jobcontract = get_post_custom_values('job_contract')[0];
 $joblocation = get_post_custom_values('job_location')[0];
 $jobcategory = get_post_custom_values('job_category')[0];
-$jobbody = get_post_custom_values('job_boby')[0];
+$jobbody = get_post_custom_values('job_body')[0];
 $jobbranch = get_post_custom_values('job_branch')[0];
+$joblink = get_post_custom_values('job_link')[0]; 
 
 ?>
 
@@ -31,13 +32,13 @@ $jobbranch = get_post_custom_values('job_branch')[0];
     <div class="row g-5">
         <div class="col-md-8">
             <div class="row mb-2">
-                <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col-md-10 p-4 flex-column position-static ">
                         <?php the_content(); ?>
                     </div>
 
                     <div class="text-center mb-5">
-                        <a href="<?php the_permalink(); ?>" class="mb-5">
+                        <a href="<?php echo $joblink; ?>" class="mb-5">
                             <button type="submit" class="btn btn-primary btn-offre"><i class="fa fa-plus"
                                     aria-hidden="true"></i> Postuler maintenant</button>
                         </a>
@@ -50,19 +51,53 @@ $jobbranch = get_post_custom_values('job_branch')[0];
         <!-- Informations sur le poste -->
 
         <div class="col-md-4 text-center box-shadow-lg">
-            <h1 class="mb-5 mt-4 post-details">Détails de l'offre : </h1>
-            <div class="row">
-                   
-            </div>
             <div class="position-sticky" style="top: 2rem;">
-                <div class="row">
-                   <?php image_post_change($jobcategory) ; ?>
+                <div class="row mb-3">
 
-
-                    <a href="<?php the_permalink(); ?>" class="mt-5">
+                    <div class="col-lg-12 text-start shadow-sm p-4">
+                        <div class="col">
+                            <h6 class="mb-3">Date de publication</h2>
+                                <i class="fa fa-calendar" aria-hidden="true"></i> <span
+                                    class="text-muted fst-italic"><?php echo get_the_date(); ?></span>
+                        </div>
+                        <hr>
+                        <div class="col mt-4">
+                            <h6 class="mb-3">Type de contrat</h2>
+                                <i class="fa fa-signal" aria-hidden="true"></i><span class="text-muted fst-italic">
+                                    <?php echo $jobcontract; ?>
+                                </span>
+                        </div>
+                        <hr>
+                        <div class="col mt-4">
+                            <h6 class="mb-3">Ville</h2>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> <span
+                                    class="text-muted fst-italic"><?php echo $joblocation;  ?>
+                                </span>
+                        </div>
+                        <hr>
+                        <div class="col mt-4">
+                            <h6 class="mb-3">Branch d'activité professionnelle</h2>
+                                <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> <span
+                                    class="text-muted fst-italic"><?php echo $jobbranch;  ?>
+                                </span>
+                        </div>
+                        <hr>
+                        <div class="col mt-4">
+                            <h6 class="mb-3">Corps</h2>
+                                <i class="fa fa-handshake-o" aria-hidden="true"></i> <span
+                                    class="text-muted fst-italic"><?php echo $jobbody;  ?>
+                                </span>
+                        </div>
+                    </div>
+                    <a href="<?php echo $joblink; ?>" class="mt-5">
                         <button type="submit" class="btn btn-primary btn-offre"><i class="fa fa-plus"
                                 aria-hidden="true"></i> Postuler maintenant</button>
                     </a>
+                </div>
+                <div class="row mt-5">
+
+                    <?php image_post_change($jobcategory) ; ?>
+
                     <a href="<?php echo get_site_url(); ?>" class="mt-5">
                         <button type="submit" class="btn btn-primary btn-offre btn-back-home"><i
                                 class="fa fa-arrow-left" aria-hidden="true"></i> Retour aux offres</button>
@@ -71,4 +106,9 @@ $jobbranch = get_post_custom_values('job_branch')[0];
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="container mt-5">
+    <h2>Dans la même catégorie</h2>
 </div>

@@ -57,8 +57,7 @@ while ($myquery->have_posts()) : $myquery->the_post();
     ?>
 
             <div class="row mb-2 ">
-                <div
-                    class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 
                     <?php changement_couleur_permutation($post_number, $post_title);?>
                     <div class="col-md-1 p-4 border align-self-center">
@@ -75,15 +74,15 @@ while ($myquery->have_posts()) : $myquery->the_post();
                                 <i class="fa fa-map-marker" aria-hidden="true"></i> <?php  echo $joblocation; ?>
                             </div>
                             <div class="col-lg-6">
-                                <i class="fa fa-bookmark-o" aria-hidden="true"></i> <?php echo $jobcontract; ?>
+                                <i class="fa fa-signal" aria-hidden="true"></i> <?php echo $jobcontract; ?>
                             </div>
                         </div>
                         <div class="row gx-3">
                             <div class="col-lg-6">
-                                <i class="fa fa-building" aria-hidden="true"></i> <?php  echo $jobbranch; ?>
+                                <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> <?php  echo $jobbranch; ?>
                             </div>
                             <div class="col-lg-6">
-                                <i class="fa fa-user" aria-hidden="true"></i> <?php echo $jobcategory; ?>
+                                <i class="fa fa-handshake-o" aria-hidden="true"></i> <?php echo $jobcategory; ?>
                             </div>
                         </div>
                     </div>
@@ -108,7 +107,8 @@ wp_reset_postdata(); ?>
             <div class="position-sticky" style="top: 2rem;">
                 <form methode="GET" action="" class="form-group">
                     <div class="mb-5">
-                        <input type="text" class="form-control" id="keyword" aria-describedby="emailHelp" placeholder="Mots-clés">
+                        <input type="text" class="form-control" id="keyword" aria-describedby="emailHelp"
+                            placeholder="Mots-clés">
                     </div>
                     <div class="mb-5">
                         <select class="form-select" aria-label="Default select example">
