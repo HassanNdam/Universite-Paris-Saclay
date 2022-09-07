@@ -18,20 +18,8 @@ $post_number = $myquery -> found_posts;
 
 <!-- Offres trouvées  -->
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="d-flex p-3 border border-1">
-            <div class="flex-grow-1 align-self-center">
-                <h5>Offres trouvées (<?= $post_number ?>)</h5>
-            </div>
-            <div class="flex-grow-2 align-self-center">
-                <a class="lien-metier" href="https://data.enseignementsup-recherche.gouv.fr/pages/referens/?flg=fr"
-                    title="Tous les métiers de l'enseignement supérieur et de la recherche" target="_blank">
-                    <i class="fa fa-eye" aria-hidden="true"></i> Voir les métiers
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="container mt-5 ">
+    <h5>Offres trouvées (<?= $post_number ?>)</h5>
 </div>
 
 <!-- Listes des offres -->
@@ -60,9 +48,6 @@ while ($myquery->have_posts()) : $myquery->the_post();
                 <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 
                     <?php changement_couleur_permutation($post_number, $post_title);?>
-                    <div class="col-md-1 p-4 border align-self-center">
-                        <?php change_icone_categorie($jobcategory); ?>
-                    </div>
                     <div class="col-md-9 p-4 flex-column position-static ">
 
                         <div class="mb-3 text-muted fst-italic">
@@ -74,19 +59,19 @@ while ($myquery->have_posts()) : $myquery->the_post();
                                 <i class="fa fa-map-marker" aria-hidden="true"></i> <?php  echo $joblocation; ?>
                             </div>
                             <div class="col-lg-6">
-                                <i class="fa fa-signal" aria-hidden="true"></i> <?php echo $jobcontract; ?>
+                                <i class="fa-sharp fa-solid fa-address-card"></i> <?php echo $jobcontract; ?>
                             </div>
                         </div>
                         <div class="row gx-3">
                             <div class="col-lg-6">
-                                <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> <?php  echo $jobbranch; ?>
+                                <i class="fa-solid fa-calendar-days"></i> <?php  echo $jobbranch; ?>
                             </div>
                             <div class="col-lg-6">
-                                <i class="fa fa-handshake-o" aria-hidden="true"></i> <?php echo $jobcategory; ?>
+                                <i class="fa-solid fa-briefcase"></i> <?php echo $jobcategory; ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 align-self-center text-center">
+                    <div class="col-md-3 align-self-center text-center">
                         <a href="<?php the_permalink(); ?> ">
                             <button type="submit" class="btn btn-primary btn-offre">Voir l'offre</button>
                         </a>
@@ -103,7 +88,7 @@ wp_reset_postdata(); ?>
         <!-- Filtre -->
 
         <div class="col-md-3 text-center box-shadow-lg">
-            <h1 class="mb-5 mt-4 filtre">Filtre</h1>
+            <h1 class="mb-5 mt-4 filtre">Lancer ma recherche</h1>
             <div class="position-sticky" style="top: 2rem;">
                 <form methode="GET" action="" class="form-group">
                     <div class="mb-5">
