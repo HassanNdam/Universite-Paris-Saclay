@@ -87,6 +87,22 @@ RVB: 246, 246, 246
 }
 
 
+::placeholder {
+    font-size: 1em;
+}
+
+::-moz-selection {
+    background-color: #000000;
+    color: white;
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -96,11 +112,16 @@ body {
 
 h1 {
     font-family: "OpenSansBold";
+    color: #8B1B59;
 }
 
-h2 {}
+h2 {
+    color: #8B1B59;
+}
 
-h3 {}
+h3 {
+    color: #8B1B59;
+}
 
 h4 {}
 
@@ -149,9 +170,19 @@ h6 {}
     color: #ffffff;
     border: #ffffff solid 2px;
     transition: .8ms all;
-
 }
 
+.lien-metier{
+    color: #8B1B59;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.lien-metier:hover{
+    color: #8B1B59;
+    padding: 15px;
+    text-decoration: underline;
+}
 
 
 /* Header image & Queries  */
@@ -163,11 +194,15 @@ h6 {}
 }
 
 
-/* Moteur de recherche  & Queries */
+/* Moteur de recherche / Filtre & Queries */
 
 .btn-dark {
     color: #ffffff;
     background-color: #224667;
+}
+
+.filtre{
+    font-size: 1.5em;
 }
 
 
@@ -212,11 +247,47 @@ h6 {}
 }
 
 
-.fa-calendar-days, .fa-address-card, .fa-briefcase  {
+.fa-calendar-days,
+.fa-address-card,
+.fa-briefcase {
     font-size: 40px;
     color: #224667;
 }
 
+.fa {
+    color: #8B1B59;
+}
+
+
+
+/* Pagination */
+
+
+.page-item.active .page-link {
+    background-color: #8B1B59;
+    border-color: #D7D7D7;
+    color: #f1f1f1;
+    opacity: 1;
+}
+
+
+.page-link {
+    color: black;
+    border: 1px solid #D7D7D7;
+    padding: 15px;
+}
+
+.page-link:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.page-link:focus,
+.page-link:active {
+    outline: none !important;
+    box-shadow: none !important;
+    color: #000000;
+}
 
 
 /* Footer & Queries */
