@@ -21,7 +21,7 @@
         <a href="#" target="_blank">
             <button type="button" class="btn mobilite-btn" onclick="this.blur();">Mobilité interne</button>
         </a>
-        <a href="#" target="_blank">
+        <a href="https://jobaffinity.fr/apply/zpmce5gaejoh4tzlip" target="_blank">
             <button type="button" class="btn btn-primary espace-buton-center" onclick="this.blur();"> Candidature spontanée</button>
         </a>
     </div>

@@ -1,6 +1,18 @@
+<?php 
 
-<?php get_header(); ?> 
+get_header();
+
+?>
 
 
+<?php 
 
-<?php get_footer(); ?> 
+get_template_part('template-loop/content', 'post');
+
+?> 
+
+<?php 
+
+get_footer();
+
+?>
