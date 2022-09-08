@@ -188,22 +188,22 @@ function image_post_change($image_categorie)
 {
     if ($image_categorie == "Cat A : cadres") {
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/General.jpg'; ?>" alt="Image affichage poste"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Le Kremlin Bicetre"
     class="img-fluid">
 <?php
     } elseif ($image_categorie == "Cat B : techniciens et encadrement intermédiaire") {
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau.jpg'; ?>" alt="Image affichage poste"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau.jpg'; ?>" alt="Orsay Plateau"
     class="img-fluid">
 <?php
     } elseif ($image_categorie == "Cat C : fonctions d'exécution") {
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Le-Kremlin-Bicetre.jpg'; ?>"
-    alt="Image affichage poste" class="img-fluid">
+<img src="<?php echo get_template_directory_uri(). '/assets/images/OrsayVallee.jpg'; ?>"
+    alt="Orsay Vallée" class="img-fluid">
 <?php
     } else {
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/General.jpg'; ?>" alt="Image affichage poste"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Image Sceaux-faculté"
     class="img-fluid">
 <?php
     }

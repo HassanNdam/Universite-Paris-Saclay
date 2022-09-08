@@ -194,8 +194,8 @@ a:hover {
 
 /* Header image & Queries  */
 
-.header-image {
-    background: url(assets/images/general2.jpg);
+.header-image-home {
+    background-image: url(assets/images/general2.jpg);
     height: 350px;
     background-position: center;
 }
@@ -211,6 +211,30 @@ a:hover {
 .filtre {
     font-size: 1.5em;
 }
+
+
+.form-control::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid #8B1B59;
+}
+
+.form-control {
+    border: 2px solid #7C8091;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+}
+
+select:focus>option:checked {
+    background: #224667 !important;
+    color: #fff;
+}
+
 
 
 
@@ -254,11 +278,6 @@ a:hover {
 }
 
 
-.fa {
-    color: #8B1B59;
-}
-
-
 
 /* Pagination */
 
@@ -292,6 +311,13 @@ a:hover {
 
 
 /* Page Poste */
+
+.header-image-post {
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+}
+
 
 .breadcrumb {
     margin-top: 0.7em;

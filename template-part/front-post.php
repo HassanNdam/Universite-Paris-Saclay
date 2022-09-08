@@ -96,37 +96,34 @@ wp_reset_postdata(); ?>
                             placeholder="Mots-clés">
                     </div>
                     <div class="mb-5">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Catégorie</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1">
+                                IGR
+                                Attaché-e principal
+                                Conservateur
+
+                            </option>
                         </select>
                     </div>
                     <div class="mb-5">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Type de contrat</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1">TECH SAENES BIBAS</option>
                         </select>
                     </div>
 
                     <div class="mb-5">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Branche d'activité professionnelle</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1">BAP A : Sciences du vivant, de la terre et de l'environnement</option>
                         </select>
                     </div>
 
                     <div class="mb-5">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Corps</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1">Titulaire de la fonction publique</option>
                         </select>
                     </div>
 
