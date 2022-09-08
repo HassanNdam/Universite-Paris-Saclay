@@ -110,8 +110,12 @@ body {
 
 }
 
+p strong code{
+    font-size: 2em;
+}
+
+
 h1 {
-    font-family: "OpenSansBold";
     color: #8B1B59;
 }
 
@@ -121,6 +125,7 @@ h2 {
 
 h3 {
     color: #8B1B59;
+    font-family: "OpenSansBold";
 }
 
 h4 {}

@@ -188,12 +188,12 @@ function image_post_change($image_categorie)
 {
     if ($image_categorie == "Cat A : cadres") {
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Le Kremlin Bicetre"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>" alt="Le Kremlin Bicetre"
     class="img-fluid">
 <?php
     } elseif ($image_categorie == "Cat B : techniciens et encadrement intermédiaire") {
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau.jpg'; ?>" alt="Orsay Plateau"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Orsay Plateau"
     class="img-fluid">
 <?php
     } elseif ($image_categorie == "Cat C : fonctions d'exécution") {
