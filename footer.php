@@ -37,13 +37,6 @@
                         <a href="https://www.universite-paris-saclay.fr/contact" class="text-reset" target="_blank"
                             title="Contactez-nous">Contactez-nous</a>
                     </p>
-                    <p>
-                        <a href="https://data.enseignementsup-recherche.gouv.fr/pages/referens/?flg=fr" class="text-reset" target="_blank"
-                            title="Tous les métiers de l'enseignement supérieur et la recherche">
-                            <button type="button" class="btn bg-transparent border border-2 text-white">Listes des
-                                métiers</button>
-                        </a>
-                    </p>
                 </div>
 
 
