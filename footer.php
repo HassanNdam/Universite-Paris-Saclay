@@ -52,12 +52,12 @@
                     <h6 class="text-uppercase fw-bold mb-4 titre-footer">
                         Nos réseaux sociaux
                     </h6>
-                    <a href="https://www.facebook.com/UParisSaclay"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/school/universit%C3%A9-paris-saclay/"><i
+                    <a href="https://www.facebook.com/UParisSaclay" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/school/universit%C3%A9-paris-saclay/" target="_blank"><i
                             class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/user/UParisSaclay"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://twitter.com/UnivParisSaclay"><i class="fa-brands fa-square-twitter"></i></a>
-                    <a href="https://www.instagram.com/universite_paris_saclay/"><i
+                    <a href="https://www.youtube.com/user/UParisSaclay" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://twitter.com/UnivParisSaclay" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com/universite_paris_saclay/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a>
                 </div>
 
