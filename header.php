@@ -16,6 +16,8 @@
 <body>
     <?php
 
+                // Recupération des custom fiels du poste 
+    
     $jobcontract = get_post_custom_values('job_contract')[0];
     $joblocation = get_post_custom_values('job_location')[0];
     $jobcategory = get_post_custom_values('job_category')[0];
@@ -25,26 +27,57 @@
 
     ?>
 
-    <header class="site-header">
+    <header id="site-header">
         <nav
             class="container navbar navbar-default navbar-expand d-flex flex-column flex-md-row justify-content-between py-3">
             <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>"
                     alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
             </a>
-            <div class="text-center mt-4 mt-lg-0 "> 
-                <a href="#" target="_blank">
-                    <button type="button" class="btn mobilite-btn" onclick="this.blur();">Mobilité interne</button>
-                </a>
+            <div class="text-center mt-4 mt-md-0">
+
+                <!-- Button mobilité interne -->
+
+                <button type="button" class="btn  mobilite-btn" onclick="this.blur();" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Mobilité interne
+                </button>
+
+                <!-- Fênetre texte mobilité -->
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header couleur1 text-white">
+                                <h5 class="modal-title" id="exampleModalLabel">Canditature interne</h5>
+                                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button> -->
+                            </div>
+                            <div class="modal-body mt-3 mb-3">
+                                <p class="fs-6 lh-lg">
+                                    Vous êtes personnel de l'Université Paris Saclay (titulaire ou CDD) et vous
+                                    souhaitez postuler sur une
+                                    de nos offres, <a href="#"
+                                        class="text-uppercase fw-bold candidate-link" title="Candidater en interne">candidatez ici</a>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Candidature Spontanée -->
+
                 <a href="https://jobaffinity.fr/apply/zpmce5gaejoh4tzlip" target="_blank" class="">
                     <button type="button" class="btn btn-primary espace-buton-center" onclick="this.blur();">
                         Candidature spontanée</button>
                 </a>
             </div>
         </nav>
-
     </header>
-
 
 
     <?php
