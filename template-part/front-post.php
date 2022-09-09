@@ -91,25 +91,27 @@ wp_reset_postdata(); ?>
             <h1 class="mb-5 mt-4 filtre">Lancer ma recherche</h1>
             <div class="position-sticky" style="top: 2rem;">
                 <form methode="GET" action="" class="form-group">
-                    <div class="mb-5">
-                        <input type="text" class="form-control" id="keyword" aria-describedby="emailHelp"
-                            placeholder="Mots-clés">
+
+                    <div class="input-group mb-5">
+                        <input type="text" class="form-control" placeholder="Mots-clés">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </div>
+
                     <div class="mb-5">
                         <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Catégorie</option>
-                            <option value="1">
-                                IGR
-                                Attaché-e principal
-                                Conservateur
-
-                            </option>
+                            <option value="1">Catégorie A : cadres</option>
                         </select>
                     </div>
                     <div class="mb-5">
                         <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Type de contrat</option>
-                            <option value="1">TECH SAENES BIBAS</option>
+                            <option value="1">Titulaire de la fonction publique</option>
+                            <option value="1">Titulaire de la fonction publique ou CDD</option>
                         </select>
                     </div>
 
@@ -123,7 +125,11 @@ wp_reset_postdata(); ?>
                     <div class="mb-5">
                         <select class="form-select form-control" aria-label="Default select example">
                             <option selected>Corps</option>
-                            <option value="1">Titulaire de la fonction publique</option>
+                            <option value="1">
+                                IGR
+                                Attaché-e principal
+                                Conservateur
+                            </option>
                         </select>
                     </div>
 

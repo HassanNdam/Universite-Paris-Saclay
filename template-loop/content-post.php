@@ -85,9 +85,6 @@ $joblink = get_post_custom_values('job_link')[0];
 
                 </div>
                 <div class="row">
-                    <a href="<?php echo $joblink; ?>" class="mt-5">
-                        <button type="submit" class="btn btn-primary btn-offre"> Postuler maintenant</button>
-                    </a>
                     <a href="<?php echo get_site_url(); ?>" class="mt-5">
                         <button type="submit" class="btn btn-primary btn-offre btn-back-home"><i
                                 class="fa fa-arrow-left" aria-hidden="true"></i> Retour aux offres</button>

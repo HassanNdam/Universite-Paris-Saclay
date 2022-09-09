@@ -128,11 +128,11 @@ h3 {
     font-family: "OpenSansBold";
 }
 
-h4 {}
+/* h4 {}
 
 h5 {}
 
-h6 {}
+h6 {} */
 
 a {
     text-decoration: none;
@@ -164,7 +164,7 @@ a:hover {
 }
 
 .btn:hover {
-    transition: 0.5ms all;
+    transition: 0.5ms all !important;
 }
 
 .mobilite-btn {
@@ -175,13 +175,10 @@ a:hover {
     transition: .8ms all;
 }
 
-
-
 .mobilite-btn:hover {
-    background-color: #8B1B59;
-    color: #ffffff;
-    border: #ffffff solid 2px;
+    color: #000000;
     transition: .8ms all;
+    border: #8B1B59 solid 2px;
 }
 
 .lien-metier {
@@ -194,6 +191,21 @@ a:hover {
     color: #8B1B59;
     padding: 15px;
     text-decoration: underline;
+}
+
+#site-header .candidate-link{
+    color: #8B1B59;
+
+}
+
+#site-header .candidate-link:hover{
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+#site-header .btn-close{
+    color: #f1f1f1;
+    
 }
 
 
@@ -211,6 +223,10 @@ a:hover {
 .btn-dark {
     color: #ffffff;
     background-color: #224667;
+}
+
+.btn-dark:hover{
+    background-color: #8B1B59;
 }
 
 .filtre {
@@ -239,8 +255,6 @@ select:focus>option:checked {
     background: #224667 !important;
     color: #fff;
 }
-
-
 
 
 
@@ -315,7 +329,7 @@ select:focus>option:checked {
 
 
 
-/* Page Poste */
+/* Page Poste  & Media Queries*/
 
 .header-image-post {
     height: 450px;
@@ -350,6 +364,13 @@ select:focus>option:checked {
     font-size: 1.4em;
 }
 
+
+@media screen and (max-width:375px) {
+    .header-image-post{
+        height: 200px;
+    }
+    
+}
 
 
 /* Footer & Queries */

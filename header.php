@@ -51,19 +51,25 @@
                         <div class="modal-content">
                             <div class="modal-header couleur1 text-white">
                                 <h5 class="modal-title" id="exampleModalLabel">Canditature interne</h5>
-                                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button> -->
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="modal-body mt-3 mb-3">
+                            <div class="modal-body mt-3">
                                 <p class="fs-6 lh-lg">
                                     Vous êtes personnel de l'Université Paris Saclay (titulaire ou CDD) et vous
                                     souhaitez postuler sur une
-                                    de nos offres, <a href="#"
-                                        class="text-uppercase fw-bold candidate-link" title="Candidater en interne">candidatez ici</a>
+                                    de nos offres?
                                 </p>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fermer</button>
+                                <!-- <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+                                    Fermer</button> -->
+                                <a href="#" class="text-uppercase fw-bold candidate-link "
+                                    title="Candidater en interne">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Candidatez
+                                        ici</button>
+                                </a>
                             </div>
                         </div>
                     </div>
