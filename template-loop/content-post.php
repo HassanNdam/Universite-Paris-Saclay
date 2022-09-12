@@ -84,6 +84,15 @@ $joblink = get_post_custom_values('job_link')[0];
                     </div>
 
                 </div>
+                <div class="row mt-5">
+                    <a href="https://data.enseignementsup-recherche.gouv.fr/pages/referens/?flg=fr"
+                        title="Consulter le référentiel des métiers de l'enseignement supérieur" target="_blank">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <i class="fa fa-eye" aria-hidden="true"></i> Consulter le référentiel des métiers
+                        </button>
+                    </a>
+                </div>
                 <div class="row">
                     <a href="<?php echo get_site_url(); ?>" class="mt-5">
                         <button type="submit" class="btn btn-primary btn-offre btn-back-home"><i
