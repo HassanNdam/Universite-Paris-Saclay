@@ -56,7 +56,7 @@ while ($myquery->have_posts()) : $myquery->the_post();
 
                         <div class="row gx-3 mb-3">
                             <div class="col-lg-6">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i> <?php  echo $joblocation; ?>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> <?php  echo $joblocation == NULL ? 'Anonyme': $joblocation;  ?>
                             </div>
                             <div class="col-lg-6">
                                 <i class="fa-sharp fa-solid fa-address-card"></i> <?php echo $jobcontract; ?>
@@ -132,8 +132,6 @@ wp_reset_postdata(); ?>
                             </option>
                         </select>
                     </div>
-
-
                     <button type="reset" class="btn btn-dark">Rafraîchir</button>
                     <button type="submit" class="btn btn-primary">Rechercher </button>
                 </form>
