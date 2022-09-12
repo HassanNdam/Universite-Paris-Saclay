@@ -9,15 +9,18 @@
     <link rel="icon" href="<?php echo(get_template_directory_uri() . '/assets/favicone/favicon-u-prune.png') ?>"
         sizes="16x16 32x32 48x48 64x64">
 
-    <?php wp_head(); ?>
+    <?php
+    include_once("data/inc-data-form.php");
+    wp_head();
+    ?>
 
 </head>
 
 <body>
     <?php
 
-                // Recupération des custom fiels du poste 
-    
+                // Recupération des custom fiels du poste
+
     $jobcontract = get_post_custom_values('job_contract')[0];
     $joblocation = get_post_custom_values('job_location')[0];
     $jobcategory = get_post_custom_values('job_category')[0];
@@ -93,11 +96,24 @@ if (is_front_page()) :
     <div class="position-relative  overflow-hidden header-image-home">
         <!-- header image    -->
     </div>
+
     <?php
-else :
+elseif(is_single()):
     ?>
     <div class="position-relative  overflow-hidden header-image-post">
-        <?php    image_post_change($joblocation); ?>
+        <?php    image_post_change_location($joblocation); ?>
+
+    </div>
+    <?php
+else:
+    ?>
+
+    <div class="row align-items-center justify-content-center header-job-search">
+        <div class="col-md-5 text-white text-center">
+            <h2 class="text-white search-result-text">Résultats de la recherche</h2>
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </div>
     </div>
     <?php
 endif;
+    ?>
