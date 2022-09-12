@@ -30,6 +30,8 @@ function saclay_support()
 
 add_action('after_setup_theme', 'saclay_support');
 
+//Fonction ajout fichiers styles
+
 function saclay_style()
 {
     wp_enqueue_style('my-custom-style', get_template_directory_uri() . '/style.css', array('ms-bootstrap'), time());
@@ -50,6 +52,8 @@ function saclay_style()
 }
 add_action('wp_enqueue_scripts', 'saclay_style');
 
+
+//Fonction ajout fichier JS boostrap
 
 function wp_enqueue_scripts_saclay()
 {
@@ -72,6 +76,7 @@ function wp_enqueue_scripts_saclay()
 add_action('wp_enqueue_scripts', 'wp_enqueue_scripts_saclay');
 
 
+//Fonction pagination
 
 if (! function_exists('pagination_post_nav')) {
     function pagination_post_nav()
@@ -172,6 +177,8 @@ function change_icone_categorie($icone_category)
     }
 }
 
+//Fonction changement couleur post
+
 function changement_couleur_permutation(int $color_change_post, string $post_title)
 {
     if ($color_change_post % 2 == 0) {
@@ -182,29 +189,53 @@ function changement_couleur_permutation(int $color_change_post, string $post_tit
 }
 
 
-// Function to display image according to categories
+// Function to display image according to location
 
-function image_post_change($image_categorie)
+function image_post_change_location($image_location)
 {
-    if ($image_categorie == "Cat A : cadres") {
-        ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>" alt="Le Kremlin Bicetre"
+
+    switch ($image_location) {
+            case 'Sceaux faculté':
+            ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Sceaux faculté"
     class="img-fluid">
 <?php
-    } elseif ($image_categorie == "Cat B : techniciens et encadrement intermédiaire") {
-        ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Orsay Plateau"
+            break;
+            case 'Orsay plateau':
+            ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>" alt="Orsay Plateau"
     class="img-fluid">
 <?php
-    } elseif ($image_categorie == "Cat C : fonctions d'exécution") {
-        ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/OrsayVallee.jpg'; ?>"
-    alt="Orsay Vallée" class="img-fluid">
+            break;
+            case 'Orsay Vallée'
+    ?>
+<div class="row">
+    <img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>" alt="Orsay Vallée"
+        class="img-fluid" style="max-height:100%">
+</div>
 <?php
-    } else {
-        ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Image Sceaux-faculté"
+            break;
+            case 'Le Kremlin Bicêtre'; 
+            ?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Le Kremlin Bicêtre"
     class="img-fluid">
 <?php
+            break;
+            case 'IUT-Cachan'; 
+        ?>
+<div class="row ">
+    <img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan"
+        class="img-fluid">
+</div>
+<?php
+            break;
+            default:
+        ?>
+<div class="row">
+    <img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>"
+        alt="Image par défaut pour les postes" class="img-fluid">
+</div>
+<?php
+            break;
     }
 }
