@@ -68,8 +68,8 @@
                             <div class="modal-footer">
                                 <!-- <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
                                     Fermer</button> -->
-                                <a href="#" class="text-uppercase fw-bold candidate-link "
-                                    title="Candidater en interne">
+                                <a href="https://jobaffinity.fr/apply/8lh3u0sbbjde7wmzp6" class="text-uppercase fw-bold candidate-link "
+                                    title="Candidater en interne" target="_blank">
                                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Candidatez
                                         ici</button>
                                 </a>
