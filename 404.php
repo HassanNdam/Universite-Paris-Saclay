@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <?php if(is_404()) : ?>
-<div class="container d-flex align-items-center justify-content-center mt-5 mb-5 shadow-sm p-5">
+<div class="container d-flex align-items-center justify-content-center mb-5 shadow-sm p-5">
     <div class="text-center">
         <h1 class="display-1 fw-bold text-404 ">404</h1>
         <p class="fs-3 mt-3"> <span class="text-warning">Oups!</span> Page non trouvée.</p>
