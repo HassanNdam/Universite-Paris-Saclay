@@ -33,10 +33,25 @@
     <header id="site-header">
         <nav
             class="container navbar navbar-default navbar-expand d-flex flex-column flex-md-row justify-content-between py-3">
-            <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>"
-                    alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
-            </a>
+
+            <div class="row align-items-center d-flex">
+                <div class="col-lg-6 col-sm-12">
+                    <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/logo/logo.png'?>"
+                            alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
+                    </a>
+                </div>
+                <?php if (is_front_page()): ?>
+                <div class="col-lg-6 col-sm-12 text-center">
+                    <span class="header-text-site text-muted">Recrutement</span>
+                </div>
+                <?php elseif(is_single()): ?>
+                <div class="col-lg-6 col-sm-12 text-center">
+                    <span class="header-text-site text-muted"><?= $joblocation == NULL ? '' : $joblocation  ?></span>
+                </div>
+
+                <?php else: endif;?>
+            </div>
             <div class="text-center mt-4 mt-md-0">
 
                 <!-- Button mobilité interne -->
@@ -68,8 +83,9 @@
                             <div class="modal-footer">
                                 <!-- <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
                                     Fermer</button> -->
-                                <a href="https://jobaffinity.fr/apply/8lh3u0sbbjde7wmzp6" class="text-uppercase fw-bold candidate-link "
-                                    title="Candidater en interne" target="_blank">
+                                <a href="https://jobaffinity.fr/apply/8lh3u0sbbjde7wmzp6"
+                                    class="text-uppercase fw-bold candidate-link " title="Candidater en interne"
+                                    target="_blank">
                                     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Candidatez
                                         ici</button>
                                 </a>
