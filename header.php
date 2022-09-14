@@ -41,13 +41,16 @@
                             alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
                     </a>
                 </div>
+
+                <!-- Show title base on the page  -->
+
                 <?php if (is_front_page()): ?>
                 <div class="col-lg-6 col-sm-12 text-center">
                     <span class="header-text-site text-muted">Recrutement</span>
                 </div>
                 <?php elseif(is_single()): ?>
                 <div class="col-lg-6 col-sm-12 text-center">
-                    <span class="header-text-site text-muted"><?= $joblocation == NULL ? '' : $joblocation  ?></span>
+                    <span class="header-text-site text-muted"><?= $joblocation == NULL ? 'Paris-Saclay' : $joblocation  ?></span>
                 </div>
 
                 <?php else: endif;?>
@@ -107,6 +110,8 @@
 
     <?php
 
+//Affiche Header en fonction de la page
+
 if (is_front_page()) :
     ?>
     <div class="position-relative  overflow-hidden header-image-home">
@@ -126,8 +131,11 @@ else:
 
     <div class="row align-items-center justify-content-center header-job-search">
         <div class="col-md-5 text-white text-center">
-            <h2 class="text-white search-result-text">Résultats de la recherche</h2>
+            <h2 class="text-white search-result-text">
+                <?php if ($_GET['s']) :?>
+            Résultats pour : "<strong><?= $GLOBALS['s']; ?></strong>"</h2>
             <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            <?php endif; ?>
         </div>
     </div>
     <?php
