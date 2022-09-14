@@ -6,7 +6,7 @@
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4 titre-footer">
-                         </i><!--UNIVERSITÉ--> PARIS-SACLAY 
+                         </i>PARIS-SACLAY 
                     </h6>
                     <a href="https://www.universite-paris-saclay.fr/" target="_blank">
                         <img class="img-fluid mt-2"
@@ -63,8 +63,8 @@
     </section>
 
     <div class="text-center p-4 text-white" style="background-color: #1b1b1b;">
-        © <?= date('Y'); ?> Copyright @ Designed by:
-        <a class="text-reset fw-bold" href="https://paradisiak.com/" target="_blank">Paradisiak</a>
+        Tous droits réservés Université Paris-Saclay  || Designed by:
+        <a class="text-reset fw-bold" href="https://paradisiak.com/" target="_blank">Paradisiak <?= date('Y'); ?></a>
     </div>
 </footer>
 
