@@ -6,7 +6,7 @@
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4 titre-footer">
-                         </i>PARIS-SACLAY 
+                        </i>PARIS-SACLAY
                     </h6>
                     <a href="https://www.universite-paris-saclay.fr/" target="_blank">
                         <img class="img-fluid mt-2"
@@ -45,11 +45,14 @@
                     <h6 class="text-uppercase fw-bold mb-4 titre-footer">
                         Nos réseaux sociaux
                     </h6>
-                    <a href="https://www.facebook.com/UParisSaclay" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/UParisSaclay" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.linkedin.com/school/universit%C3%A9-paris-saclay/" target="_blank"><i
                             class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/user/UParisSaclay" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://twitter.com/UnivParisSaclay" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.youtube.com/user/UParisSaclay" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://twitter.com/UnivParisSaclay" target="_blank"><i
+                            class="fa-brands fa-square-twitter"></i></a>
                     <a href="https://www.instagram.com/universite_paris_saclay/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a>
                 </div>
@@ -63,7 +66,7 @@
     </section>
 
     <div class="text-center p-4 text-white" style="background-color: #1b1b1b;">
-        Tous droits réservés Université Paris-Saclay  || Designed by:
+        Tous droits réservés Université Paris-Saclay || Designed by:
         <a class="text-reset fw-bold" href="https://paradisiak.com/" target="_blank">Paradisiak <?= date('Y'); ?></a>
     </div>
 </footer>
@@ -71,7 +74,7 @@
 
 <?php
 wp_footer()
-            ?>
+                            ?>
 
 </body>
 
