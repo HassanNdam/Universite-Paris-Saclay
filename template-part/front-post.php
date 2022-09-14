@@ -1,18 +1,8 @@
 <?php
 
-global $wp_query;
-$args = $wp_query -> query_vars;
-$args ['post_type'] = 'post';
+require("data-connect.php");
 
-$metaquery = array();
-
-$args ['meta_query'] = $metaquery;
-
-$myquery = new WP_Query($args);
-
-$wp_query = $myquery;
-
-$post_number = $myquery -> found_posts;
+require("search-engine.php");
 
 ?>
 
@@ -29,20 +19,21 @@ $post_number = $myquery -> found_posts;
         <div class="col-md-9">
 
             <?php
+if(have_posts()) :
 
-while ($myquery->have_posts()) : $myquery->the_post();
+    while ($myquery->have_posts()) : $myquery->the_post();
 
-    $post_number2 = 0;
+        $post_number2 = 0;
 
-    $jobcontract = get_post_custom_values('job_contract')[0];
-    $joblocation = get_post_custom_values('job_location')[0];
-    $jobcategory = get_post_custom_values('job_category')[0];
-    $jobbody = get_post_custom_values('job_boby')[0];
-    $jobbranch = get_post_custom_values('job_branch')[0];
+        $jobcontract = get_post_custom_values('job_contract')[0];
+        $joblocation = get_post_custom_values('job_location')[0];
+        $jobcategory = get_post_custom_values('job_category')[0];
+        $jobbody = get_post_custom_values('job_boby')[0];
+        $jobbranch = get_post_custom_values('job_branch')[0];
 
-    $post_title = get_the_title($post);
+        $post_title = get_the_title($post);
 
-    ?>
+        ?>
 
             <div class="row mb-2 ">
                 <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -56,7 +47,8 @@ while ($myquery->have_posts()) : $myquery->the_post();
 
                         <div class="row gx-3 mb-3">
                             <div class="col-lg-6">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i> <?php  echo $joblocation == NULL ? 'Anonyme': $joblocation;  ?>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <?php  echo $joblocation == null ? 'Anonyme' : $joblocation;  ?>
                             </div>
                             <div class="col-lg-6">
                                 <i class="fa-sharp fa-solid fa-address-card"></i> <?php echo $jobcontract; ?>
@@ -73,7 +65,8 @@ while ($myquery->have_posts()) : $myquery->the_post();
                     </div>
                     <div class="col-md-3 align-self-center text-center">
                         <a href="<?php the_permalink(); ?> ">
-                            <button type="submit" class="btn btn-primary btn-offre">Voir l'offre</button>
+                            <button type="submit" class="btn btn-primary btn-offre" onclick="this.blur();">Voir
+                                l'offre</button>
                         </a>
                     </div>
                 </div>
@@ -81,7 +74,35 @@ while ($myquery->have_posts()) : $myquery->the_post();
 
 
             <?php $post_number++ ; endwhile;
-wp_reset_postdata(); ?>
+    wp_reset_postdata();
+
+else: ?>
+            <div class="container seach-not-found shadow-sm bg-light rounded-3 mt-5 mb-5 ">
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-5 text-center">
+                        <h4 class="not-found-post-text mt-3 mb-3">Oups ! Aucune offre ne correspond à votre recherche !</h4>
+                        <a class="back-to-offers-link mt-4" href="<?php echo get_site_url();?>"><i class="fa fa-angle-left"
+                                aria-hidden="true"></i> Revenir à la liste des offres</a>
+                    </div>
+                    <div class="col-lg-2 text-center">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <h4 class="not-found-post-text mt-3 mb-3">Vous pouvez soummetre une candidature spontanée</h4>
+                    </div>
+                    <div class="row text-center">
+                        <a class="mt-5" href="https://jobaffinity.fr/apply/zpmce5gaejoh4tzlip" target="_blank"
+                            title="Soumettre une candidature spontanée">
+                            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature spontanée</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+
+endif;
+
+?>
 
         </div>
 
@@ -93,7 +114,7 @@ wp_reset_postdata(); ?>
                 <form methode="GET" action="" class="form-group">
 
                     <div class="input-group mb-5">
-                        <input type="text" class="form-control" placeholder="Mots-clés">
+                        <input type="search" class="form-control" placeholder="Mots-clés" name="s">
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="submit">
                                 <i class="fa fa-search"></i>
@@ -133,7 +154,7 @@ wp_reset_postdata(); ?>
                         </select>
                     </div>
                     <button type="reset" class="btn btn-dark">Rafraîchir</button>
-                    <button type="submit" class="btn btn-primary">Rechercher </button>
+                    <button type="submit" class="btn btn-primary" onclick="this.blur();">Rechercher </button>
                 </form>
 
             </div>
