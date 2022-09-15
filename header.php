@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Université Paris-Saclay - Recrutement" />
+    <meta property="og:description"
+        content="Bienvenue sur le site de recrutement de l'Université PARIS-SACLAY. Vous pouvez soummetre les offres d'emploi sur cette page pour le poste qui vous intéressé." />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?php is_front_page() ? get_site_url() : get_post_permalink();   ?> " />
+    <meta property="og:image" content="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>" />
+
     <title><?php echo bloginfo("name");?></title>
     <link rel="icon" href="<?php echo(get_template_directory_uri() . '/assets/favicone/favicon-u-prune.png') ?>"
         sizes="16x16 32x32 48x48 64x64">
@@ -50,7 +59,8 @@
                 </div>
                 <?php elseif(is_single()): ?>
                 <div class="col-lg-6 col-sm-12 text-center">
-                    <span class="header-text-site text-muted"><?= $joblocation == NULL ? 'Paris-Saclay' : $joblocation  ?></span>
+                    <span
+                        class="header-text-site text-muted"><?= $joblocation == null ? 'Paris-Saclay' : $joblocation  ?></span>
                 </div>
 
                 <?php else: endif;?>
@@ -133,7 +143,7 @@ else:
         <div class="col-md-5 text-white text-center">
             <h2 class="text-white search-result-text">
                 <?php if ($_GET['s']) :?>
-            Résultats pour : "<strong><?= $GLOBALS['s']; ?></strong>"</h2>
+                Résultats pour : "<strong><?= $GLOBALS['s']; ?></strong>"</h2>
             <i class="fa fa-arrow-down" aria-hidden="true"></i>
             <?php endif; ?>
         </div>
