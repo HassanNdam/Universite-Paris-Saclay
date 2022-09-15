@@ -198,43 +198,40 @@ function image_post_change_location($image_location)
             case 'Sceaux faculté':
             ?>
 <img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Sceaux faculté"
-    class="img-fluid">
+    class="img-fluid" width="100%">
 <?php
             break;
             case 'Orsay plateau':
             ?>
 <img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>" alt="Orsay Plateau"
-    class="img-fluid">
+    class="img-fluid" width="100%">
 <?php
             break;
             case 'Orsay Vallée'
     ?>
-<div class="row">
-    <img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>" alt="Orsay Vallée"
-        class="img-fluid" style="max-height:100%">
-</div>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>" alt="Orsay Vallée"
+    class="img-fluid" width="100%">
+
 <?php
             break;
             case 'Le Kremlin Bicêtre'; 
             ?>
 <img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Le Kremlin Bicêtre"
-    class="img-fluid">
+    class="img-fluid" width="100%">
 <?php
             break;
             case 'IUT-Cachan'; 
         ?>
-<div class="row ">
-    <img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan"
-        class="img-fluid">
-</div>
+
+<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan" class="img-fluid"
+    width="100%">
+
 <?php
             break;
             default:
         ?>
-<div class="row">
-    <img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>"
-        alt="Image par défaut pour les postes" class="img-fluid">
-</div>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>"
+    alt="Image par défaut pour les postes" class="img-fluid" width="100%">
 <?php
             break;
     }
