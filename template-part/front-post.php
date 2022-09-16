@@ -1,8 +1,11 @@
 <?php
 
+require("search-engine.php");
+
 require("data-connect.php");
 
-require("search-engine.php");
+get_template_part("data/inc-data", "");
+
 
 ?>
 
@@ -44,11 +47,10 @@ if(have_posts()) :
                         <div class="mb-3 text-muted fst-italic">
                             Publié le <?php echo get_the_date(); ?>
                         </div>
-
                         <div class="row gx-3 mb-3">
                             <div class="col-lg-6">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <?php  echo $joblocation == null ? 'Anonyme' : $joblocation;  ?>
+                                <?php  echo $joblocation == null ? 'PARIS-SACLAY' : $joblocation;  ?>
                             </div>
                             <div class="col-lg-6">
                                 <i class="fa-sharp fa-solid fa-address-card"></i> <?php echo $jobcontract; ?>
@@ -80,9 +82,12 @@ else: ?>
             <div class="container seach-not-found shadow-sm bg-light rounded-3 mt-5 mb-5 ">
                 <div class="row justify-content-center mt-4">
                     <div class="col-lg-5 text-center">
-                        <h4 class="not-found-post-text mt-3 mb-3">Oups ! Aucune offre ne correspond à votre recherche !</h4>
-                        <a class="back-to-offers-link mt-4" href="<?php echo get_site_url();?>"><i class="fa fa-angle-left"
-                                aria-hidden="true"></i> Revenir à la liste des offres</a>
+                        <h4 class="not-found-post-text mt-3 mb-3">Oups ! Aucune offre ne correspond à votre recherche !
+                        </h4>
+                        <?php if(($_GET)) : ?>
+                        <a class="back-to-offers-link mt-4" href="<?php echo get_site_url();?>"><i
+                                class="fa fa-angle-left" aria-hidden="true"></i> Revenir à la liste des offres</a>
+                        <?php endif; ?>
                     </div>
                     <div class="col-lg-2 text-center">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -93,7 +98,8 @@ else: ?>
                     <div class="row text-center">
                         <a class="mt-5" href="https://jobaffinity.fr/apply/zpmce5gaejoh4tzlip" target="_blank"
                             title="Soumettre une candidature spontanée">
-                            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature spontanée</button>
+                            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature
+                                spontanée</button>
                         </a>
                     </div>
                 </div>
@@ -112,9 +118,9 @@ endif;
             <h1 class="mb-5 mt-4 filtre">Lancer ma recherche</h1>
             <div class="position-sticky" style="top: 2rem;">
                 <form methode="GET" action="" class="form-group">
-
                     <div class="input-group mb-5">
-                        <input type="search" class="form-control" placeholder="Mots-clés" name="s">
+                        <input type="search" id="s" class="form-control" placeholder="MOTS-CLÉS" name="s"
+                            value="<?php  echo $keyword; ?>">
                         <div class="input-group-append">
                             <button class="btn btn-secondary" type="submit">
                                 <i class="fa fa-search"></i>
@@ -123,38 +129,44 @@ endif;
                     </div>
 
                     <div class="mb-5">
-                        <select class="form-select form-control" aria-label="Default select example">
-                            <option selected>Catégorie</option>
-                            <option value="1">Catégorie A : cadres</option>
+                        <select name="category" class="form-select form-control" aria-label="Default select example">
+                            <option value="0" <?php echo $category_value == 0 ? 'selected' : ''; ?>>Catégorie</option>
+                            <?php 
+                                 select_search_value(JOBCATEGORY);
+                             ?>
                         </select>
                     </div>
                     <div class="mb-5">
-                        <select class="form-select form-control" aria-label="Default select example">
-                            <option selected>Type de contrat</option>
-                            <option value="1">Titulaire de la fonction publique</option>
-                            <option value="1">Titulaire de la fonction publique ou CDD</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-5">
-                        <select class="form-select form-control" aria-label="Default select example">
-                            <option selected>Branche d'activité professionnelle</option>
-                            <option value="1">BAP A : Sciences du vivant, de la terre et de l'environnement</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-5">
-                        <select class="form-select form-control" aria-label="Default select example">
-                            <option selected>Corps</option>
-                            <option value="1">
-                                IGR
-                                Attaché-e principal
-                                Conservateur
+                        <select name="contract" class="form-select form-control" aria-label="Default select example">
+                            <option value="0" <?php if ($contract_value == 0) echo('selected'); ?>>Type de contrat
                             </option>
+                            <?php 
+                                  select_search_value(JOBCONTRACT);
+                            ?>
                         </select>
                     </div>
-                    <button type="reset" class="btn btn-dark">Rafraîchir</button>
-                    <button type="submit" class="btn btn-primary" onclick="this.blur();">Rechercher </button>
+
+                    <div class="mb-5">
+                        <select name="branch" class="form-select form-control" aria-label="Default select example">
+                            <option value="0" <?php if ($branch_value == 0) echo('selected'); ?>>BAP</option>
+                            <?php 
+                                select_search_value(JOBBRANCH);
+                            ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+                        <select name="body" class="form-select form-control" aria-label="Default select example">
+                            <option <?php if ($body_value == 0) echo('selected'); ?>>Corps</option>
+                            <?php 
+                                select_search_value(JOBBODY);
+                            ?>
+                        </select>
+                    </div>
+                    <button type="button" onclick='window.location.reload(false)'
+                        class="btn btn-dark">Rafraîchir</button>
+                    <button type="submit" class="btn btn-primary" id="searchsubmit" onclick="this.blur();">Rechercher
+                    </button>
                 </form>
 
             </div>
