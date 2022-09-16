@@ -236,3 +236,22 @@ function image_post_change_location($image_location)
             break;
     }
 }
+
+
+//Function to display the elements on the select (via search form)
+
+function select_search_value( $list = array()){
+    $size_const = count($list); 
+    $i = 0; 
+    while($i < $size_const) : 
+        foreach($list as $element):                                        
+            echo("<option value='" . ($i + 1) . "'");
+            if($category_value == $i + 1) {
+                echo(" selected='selected'");
+            }
+            echo(">" . $element. "</option>");
+            ++$i;
+        endforeach;
+    endwhile; 
+
+}
