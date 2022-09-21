@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 
 //Limitation excerpt POST
 
@@ -254,4 +255,18 @@ function select_search_value( $list = array()){
         endforeach;
     endwhile; 
 
+}
+
+//Fonction change title text for search engine (SEO)
+
+function change_title_browser_top(){
+    if(is_front_page()){
+      return bloginfo("name");
+    }elseif(is_single()){
+        echo $post_single_title = ' - Offres d\'emploi Paris-Saclay' . single_post_title() ;  
+        return $post_single_title ;     }
+        else{
+            echo $search_title = "Recherche - Offre d'emploi Université Paris-Saclay";
+            return $search_title; 
+        }
 }
