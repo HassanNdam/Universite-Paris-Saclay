@@ -14,7 +14,7 @@
     <meta property="og:url" content="<?php is_front_page() ? get_site_url() : get_post_permalink();   ?> " />
     <meta property="og:image" content="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>" />
 
-    <title><?php echo bloginfo("name");?></title>
+    <title><?php change_title_browser_top();?></title>
     <link rel="icon" href="<?php echo(get_template_directory_uri() . '/assets/favicone/favicon-u-prune.png') ?>"
         sizes="16x16 32x32 48x48 64x64">
 
