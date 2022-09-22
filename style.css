@@ -92,7 +92,7 @@ RVB: 246, 246, 246
 }
 
 ::-moz-selection {
-    background-color: #000000;
+    background-color: #000000 !important;
     color: white;
 }
 
@@ -110,10 +110,11 @@ body {
 
 }
 
-p strong code{
+code {
     font-size: 2em;
+    color: #8b1b59;
+    word-wrap: break-word;
 }
-
 
 h1 {
     color: #8B1B59;
@@ -148,7 +149,7 @@ a:hover {
 
 
 .btn-primary:hover {
-    background-color: #312336;
+    background-color: #224667;
 }
 
 .btn {
@@ -193,39 +194,68 @@ a:hover {
     text-decoration: underline;
 }
 
-#site-header .candidate-link{
+#site-header .candidate-link {
     color: #8B1B59;
 
 }
 
-#site-header .candidate-link:hover{
+#site-header .candidate-link:hover {
     text-decoration: none;
     text-decoration: underline;
 }
 
-#site-header .btn-close{
+#site-header .btn-close {
     color: #f1f1f1;
-    
+
+}
+
+/* Header Sites variation*/
+
+#site-header .header-text-site {
+    font-family: 'OpenSansBold';
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 900;
+    font-size: large;
 }
 
 
 /* Header image & Queries  */
 
+
 .header-image-home {
     background-image: url(assets/images/general2.jpg);
     height: 350px;
     background-position: center;
+    background-size: cover;
+}
+
+.header-job-search {
+    background-image: url(assets/images/header-image.png);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-job-search .search-result-text {
+    font-family: 'OpenSansRegular';
+    font-size: 2.3em;
+}
+
+.header-job-search .fa-arrow-down {
+    font-size: 1.5em;
 }
 
 
 /* Moteur de recherche / Filtre & Queries */
+
 
 .btn-dark {
     color: #ffffff;
     background-color: #224667;
 }
 
-.btn-dark:hover{
+.btn-dark:hover {
     background-color: #8B1B59;
 }
 
@@ -256,15 +286,50 @@ select:focus>option:checked {
     color: #fff;
 }
 
+option {
+    background-color: #8B1B59;
+    color: #ffffff;
+}
 
 
-/* Bloc text nombres postes & Queries */
+
+/* Search not found */
 
 
+.seach-not-found {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
 
+.not-found-post-text {
+    font-size: 1.5em;
+    line-height: 1.7em;
+}
+
+.seach-not-found .fa-search {
+    font-size: 4em;
+    color: #8B1B59;
+}
+
+.back-to-offers-link {
+    color: #8b1b59;
+}
+
+.back-to-offers-link:hover {
+    text-decoration: underline;
+}
+
+
+/* 404 page */
+
+
+.text-404{
+    font-size: 10em;
+}
 
 
 /* Bloc offres d'emploi & Queries */
+
 
 
 .couleur1 {
@@ -332,11 +397,10 @@ select:focus>option:checked {
 /* Page Poste  & Media Queries*/
 
 .header-image-post {
-    height: 450px;
     background-position: center;
     background-size: cover;
+    height: 400px;
 }
-
 
 .breadcrumb {
     margin-top: 0.7em;
@@ -365,11 +429,11 @@ select:focus>option:checked {
 }
 
 
-@media screen and (max-width:375px) {
-    .header-image-post{
+@media screen and (max-width:768px) {
+    .header-image-post {
         height: 200px;
     }
-    
+
 }
 
 
@@ -412,6 +476,3 @@ footer a .fa-brands:hover {
     color: #8B1B59;
     transition: 0.3s all;
 }
-
-
-/* Css Cookies & Media Query */

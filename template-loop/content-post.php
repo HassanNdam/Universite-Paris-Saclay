@@ -36,9 +36,8 @@ $joblink = get_post_custom_values('job_link')[0];
                     <div class="col-md-10 p-4 flex-column position-static ">
                         <?php the_content(); ?>
                     </div>
-
                     <div class="text-center mb-5">
-                        <a href="<?php echo $joblink; ?>" class="mb-5">
+                        <a href="<?php echo $joblink; ?>" class="mb-5" title="Candidater pour le poste de <?= the_title_attribute(); ?>">
                             <button type="submit" class="btn btn-primary btn-offre"> Postuler maintenant</button>
                         </a>
                     </div>
@@ -67,7 +66,7 @@ $joblink = get_post_custom_values('job_link')[0];
                         <hr>
                         <div class="col mt-4">
                             <i class="fa fa-map-marker" aria-hidden="true"></i> <span
-                                class="text-muted"><?php echo $joblocation;  ?>
+                                class="text-muted"><?php echo $joblocation == NULL ? 'PARIS-SACLAY': $joblocation;  ?>
                             </span>
                         </div>
                         <hr>
@@ -87,15 +86,14 @@ $joblink = get_post_custom_values('job_link')[0];
                 <div class="row mt-5">
                     <a href="https://data.enseignementsup-recherche.gouv.fr/pages/referens/?flg=fr"
                         title="Consulter le référentiel des métiers de l'enseignement supérieur" target="_blank">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            <i class="fa fa-eye" aria-hidden="true"></i> Consulter le référentiel des métiers
+                        <button type="button" class="btn btn-primary" onclick="this.blur();">
+                            Consulter le référentiel des métiers
                         </button>
                     </a>
                 </div>
                 <div class="row">
                     <a href="<?php echo get_site_url(); ?>" class="mt-5">
-                        <button type="submit" class="btn btn-primary btn-offre btn-back-home"><i
+                        <button type="submit" class="btn btn-primary btn-offre btn-back-home" onclick="this.blur();"><i
                                 class="fa fa-arrow-left" aria-hidden="true"></i> Retour aux offres</button>
                     </a>
                 </div>
