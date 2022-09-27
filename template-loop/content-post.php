@@ -33,7 +33,7 @@ $joblink = get_post_custom_values('job_link')[0];
         <div class="col-md-8">
             <div class="row mb-2">
                 <div class="row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col-md-10 p-4 flex-column position-static ">
+                    <div class="col-md-12 p-4 flex-column position-static text-justify">
                         <?php the_content(); ?>
                     </div>
                     <div class="text-center mb-5">

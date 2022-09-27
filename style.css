@@ -110,6 +110,10 @@ body {
 
 }
 
+p{
+    text-align: justify;
+}
+
 code {
     font-size: 2em;
     color: #8b1b59;
