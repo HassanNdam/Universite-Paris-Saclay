@@ -28,11 +28,12 @@ if(have_posts()) :
 
         $post_number2 = 0;
 
-        $jobcontract = get_post_custom_values('job_contract')[0];
+        $jobcontract = get_post_custom_values('job_contract_type')[0];
         $joblocation = get_post_custom_values('job_location')[0];
-        $jobcategory = get_post_custom_values('job_category')[0];
-        $jobbody = get_post_custom_values('job_boby')[0];
-        $jobbranch = get_post_custom_values('job_branch')[0];
+        $jobcategory = get_post_custom_values('custom_categorie')[0];
+        $jobbody = get_post_custom_values('custom_corps')[0];
+        $jobbranch = get_post_custom_values('custom_bap')[0];
+        $joblink = get_post_custom_values('job_link')[0];
 
         $post_title = get_the_title($post);
 
@@ -147,7 +148,7 @@ endif;
                     </div>
 
                     <div class="mb-5">
-                        <select name="branch" class="form-select form-control" aria-label="Default select example">
+                        <select name="branch" class="form-select form-control" aria-label="Default select example" title="Branche d'Activité Professionnelle">
                             <option value="0" <?php if ($branch_value == 0) echo('selected'); ?>>BAP</option>
                             <?php 
                                 select_search_value(JOBBRANCH);

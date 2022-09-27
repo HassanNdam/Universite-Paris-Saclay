@@ -16,7 +16,14 @@ define("JOBCONTRACT", [
   "Titulaire de la fonction publique",
   "Titulaire de la fonction publique ou CDD",
   "CDD",
-  "CDI"
+  "CDI",
+  "Interim",
+  "Stage",
+  "Alternance",
+  "CDIC",
+  "Mission",
+  "Statutaire", 
+  "Autre"
 ], false);
 
 
