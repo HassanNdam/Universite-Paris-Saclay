@@ -429,6 +429,10 @@ option {
 }
 
 
+.intuitionapply {
+    display: none;
+}
+
 @media screen and (max-width:768px) {
     .header-image-post {
         height: 200px;

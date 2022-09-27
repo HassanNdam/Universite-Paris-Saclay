@@ -1,10 +1,10 @@
 <?php
 
-$jobcontract = get_post_custom_values('job_contract')[0];
+$jobcontract = get_post_custom_values('job_contract_type')[0];
 $joblocation = get_post_custom_values('job_location')[0];
-$jobcategory = get_post_custom_values('job_category')[0];
-$jobbody = get_post_custom_values('job_body')[0];
-$jobbranch = get_post_custom_values('job_branch')[0];
+$jobcategory = get_post_custom_values('custom_categorie')[0];
+$jobbody = get_post_custom_values('custom_corps')[0];
+$jobbranch = get_post_custom_values('custom_bap')[0];
 $joblink = get_post_custom_values('job_link')[0];
 
 ?>
@@ -37,8 +37,8 @@ $joblink = get_post_custom_values('job_link')[0];
                         <?php the_content(); ?>
                     </div>
                     <div class="text-center mb-5">
-                        <a href="<?php echo $joblink; ?>" class="mb-5" title="Candidater pour le poste de <?= the_title_attribute(); ?>">
-                            <button type="submit" class="btn btn-primary btn-offre"> Postuler maintenant</button>
+                        <a href="<?php echo $joblink; ?>" class="mb-5" title="Candidater pour le poste de <?= the_title_attribute(); ?>" target="_blank" >
+                            <button type="submit" class="btn btn-primary btn-offre" onclick="this.blur();"> Postuler maintenant</button>
                         </a>
                     </div>
                 </div>
