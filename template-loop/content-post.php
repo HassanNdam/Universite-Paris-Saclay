@@ -54,7 +54,7 @@ $jobtown =  get_post_custom_values('job_town')[0];
             <div class="position-sticky" style="top: 2rem;">
                 <div class="row mb-2">
 
-                    <div class="col-lg-12 text-start shadow-sm p-4">
+                    <div class="col-lg-12 text-start shadow-sm p-4 border-right ">
                         <div class="col">
                             <i class="fa fa-clock-o" aria-hidden="true"></i> <span
                                 class="text-muted fst-italic"><?php echo 'Publiée le ' . get_the_date(); ?></span>

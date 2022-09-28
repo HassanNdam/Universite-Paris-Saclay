@@ -451,6 +451,12 @@ option {
     display: none;
 }
 
+.border-right{
+    border-right : 5px solid #8B1B59;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 @media screen and (max-width:768px) {
     .header-image-post {
         height: 200px;
