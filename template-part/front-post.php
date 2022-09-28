@@ -59,12 +59,16 @@ if(have_posts()) :
                             </div>
                         </div>
                         <div class="row gx-3">
+                            <?php if($jobbranch != null) : ?>
                             <div class="col-lg-6">
                                 <i class="fa-solid fa-calendar-days"></i> <?php  echo $jobbranch; ?>
                             </div>
+                            <?php else : endif; ?>
+                            <?php if($jobcategory != null) : ?>
                             <div class="col-lg-6">
                                 <i class="fa-solid fa-briefcase"></i> <?php echo $jobcategory; ?>
                             </div>
+                            <?php else : endif; ?>
                         </div>
                     </div>
                     <div class="col-md-3 align-self-center text-center">

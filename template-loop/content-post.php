@@ -71,17 +71,21 @@ $jobtown =  get_post_custom_values('job_town')[0];
                                 class="text-muted"><?php echo $joblocation == NULL ? 'PARIS-SACLAY': $joblocation;  ?>
                             </span>
                         </div>
+                        <?php if($jobbranch != null) : ?>
                         <hr>
                         <div class="col mt-4">
                             <i class="fa-solid fa-calendar-days"></i> <span
                                 class="text-muted"><?php echo $jobbranch;  ?>
                             </span>
                         </div>
+                        <?php else: endif; ?>
+                        <?php if($jobbody != null) : ?>
                         <hr>
                         <div class="col mt-4">
                             <i class="fa-solid fa-briefcase"></i> <span class="text-muted"><?php echo $jobbody;  ?>
                             </span>
                         </div>
+                        <?php else: endif; ?>
                     </div>
 
                 </div>
