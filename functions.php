@@ -198,41 +198,45 @@ function image_post_change_location($image_location)
     switch ($image_location) {
             case 'Sceaux':
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Sceaux faculté - offre d'emploi"
-    class="img-fluid" width="100%">
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>"
+    alt="Sceaux faculté - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
             case 'ORSAY':
-            ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/ORSAY.png'; ?>" alt="Orsay Plateau - offre d'emploi"
-    class="img-fluid" width="100%">
-<?php
-            break;
-            case 'ORSAY'
+                $switch = rand(1,2); 
+if ($switch == 1) {
     ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/ORSAY.png'; ?>" alt="Orsay Vallée - offre d'emploi"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/ORSAY.png'; ?>" alt="Orsay Ville - offre d'emploi"
     class="img-fluid" width="100%">
+<?php
+} else{ 
+?>
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>"
+    alt="Orsay Plateau - offre d'emploi" class="img-fluid" width="100%">
+<?php 
+} //Endif
+?>
 
-<?php
+<?php 
             break;
-            case 'Gif-Sur-Yvettes'; 
+            case 'GIF-SUR-IVETTES': 
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Gif-Sur-Yvettes.png'; ?>" alt="Gif-Sur-Yvettes - offre d'emploi"
-    class="img-fluid" width="100%">
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Gif-Sur-Yvettes.png'; ?>"
+    alt="Gif-Sur-Yvettes - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
-            case 'CACHAN'; 
+            case 'CACHAN': 
         ?>
 
-<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan - offre d'emploi" class="img-fluid"
-    width="100%">
+<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan - offre d'emploi"
+    class="img-fluid" width="100%">
 
 <?php
             break;
             default:
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay.png'; ?>"
-    alt="ORSAY - offre d'emploi" class="img-fluid" width="100%">
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay.png'; ?>" alt="ORSAY - offre d'emploi"
+    class="img-fluid" width="100%">
 <?php
             break;
     }
