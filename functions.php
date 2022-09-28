@@ -196,43 +196,43 @@ function image_post_change_location($image_location)
 {
 
     switch ($image_location) {
-            case 'Sceaux faculté':
+            case 'Sceaux':
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Sceaux faculté"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>" alt="Sceaux faculté - offre d'emploi"
     class="img-fluid" width="100%">
 <?php
             break;
-            case 'Orsay plateau':
+            case 'ORSAY':
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>" alt="Orsay Plateau"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/ORSAY.png'; ?>" alt="Orsay Plateau - offre d'emploi"
     class="img-fluid" width="100%">
 <?php
             break;
-            case 'Orsay Vallée'
+            case 'ORSAY'
     ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>" alt="Orsay Vallée"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/ORSAY.png'; ?>" alt="Orsay Vallée - offre d'emploi"
     class="img-fluid" width="100%">
 
 <?php
             break;
-            case 'Le Kremlin Bicêtre'; 
+            case 'Gif-Sur-Yvettes'; 
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/le-kremlin-bicetre.png'; ?>" alt="Le Kremlin Bicêtre"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Gif-Sur-Yvettes.png'; ?>" alt="Gif-Sur-Yvettes - offre d'emploi"
     class="img-fluid" width="100%">
 <?php
             break;
-            case 'IUT-Cachan'; 
+            case 'CACHAN'; 
         ?>
 
-<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan" class="img-fluid"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan - offre d'emploi" class="img-fluid"
     width="100%">
 
 <?php
             break;
             default:
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay_Valee.jpg'; ?>"
-    alt="Image par défaut pour les postes" class="img-fluid" width="100%">
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay.png'; ?>"
+    alt="ORSAY - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
     }
