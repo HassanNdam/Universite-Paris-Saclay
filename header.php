@@ -51,18 +51,12 @@
                     </a>
                 </div>
 
-                <!-- Show title base on the page  -->
+                <!-- Show title on the front page -->
 
                 <?php if (is_front_page()): ?>
                 <div class="col-lg-6 col-sm-12 text-center">
                     <span class="header-text-site text-muted">Recrutement</span>
                 </div>
-                <?php elseif(is_single()): ?>
-                <div class="col-lg-6 col-sm-12 text-center">
-                    <span
-                        class="header-text-site text-muted"><?= $joblocation == null ? 'Paris-Saclay' : $joblocation  ?></span>
-                </div>
-
                 <?php else: endif;?>
             </div>
             <div class="text-center mt-4 mt-md-0">
