@@ -110,7 +110,7 @@ body {
 
 }
 
-p{
+p {
     text-align: justify;
 }
 
@@ -327,7 +327,7 @@ option {
 /* 404 page */
 
 
-.text-404{
+.text-404 {
     font-size: 10em;
 }
 
@@ -379,14 +379,16 @@ option {
 
 
 .page-link {
-    color: black;
-    border: 1px solid #D7D7D7;
-    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #8B1B59;
+    padding: 10px;
+    transition: 1s all;
 }
 
 .page-link:hover {
     color: #000000;
     text-decoration: none;
+    transition: 1s all;
 }
 
 .page-link:focus,
@@ -396,7 +398,19 @@ option {
     color: #000000;
 }
 
+.page-item:not(:first-child) .page-link {
+    margin-left: 1px;
+}
 
+.page-item:first-child .page-link {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
 /* Page Poste  & Media Queries*/
 
