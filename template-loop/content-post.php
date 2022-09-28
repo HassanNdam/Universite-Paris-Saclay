@@ -6,6 +6,8 @@ $jobcategory = get_post_custom_values('custom_categorie')[0];
 $jobbody = get_post_custom_values('custom_corps')[0];
 $jobbranch = get_post_custom_values('custom_bap')[0];
 $joblink = get_post_custom_values('job_link')[0];
+$jobaddress =  get_post_custom_values('job_address')[0]; 
+$jobtown =  get_post_custom_values('job_town')[0]; 
 
 ?>
 
