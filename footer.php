@@ -4,14 +4,11 @@
     <section class="pb-1 p-3">
         <div class="container text-center text-md-start mt-5">
             <div class="row mt-3">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4 titre-footer">
-                        </i>PARIS-SACLAY
-                    </h6>
+                <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
                     <a href="https://www.universite-paris-saclay.fr/" target="_blank">
-                        <img class="img-fluid mt-2"
+                        <img class="img-fluid"
                             src="<?php echo(get_template_directory_uri() . '/assets/logo/logo-ups-white_1.svg') ?>"
-                            alt="Logo Université PARIS-SACLAY">
+                            alt="Logo Université PARIS-SACLAY" width="190">
                     </a>
                     <p class="mt-5">3 rue Joliot Curie
                         Bâtiment Breguet
@@ -31,18 +28,6 @@
                 </div>
                 <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4 titre-footer">
-                        Contact
-                    </h6>
-                    <p>
-                        <a href="https://www.universite-paris-saclay.fr/contact" class="text-reset" target="_blank"
-                            title="Contactez-nous">Contactez-nous</a>
-                    </p>
-                </div>
-
-
-
-                <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4 titre-footer">
                         Nos réseaux sociaux
                     </h6>
                     <a href="https://www.facebook.com/UParisSaclay" target="_blank"><i
@@ -56,18 +41,26 @@
                     <a href="https://www.instagram.com/universite_paris_saclay/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a>
                 </div>
-
             </div>
-
-            <p class="texte-univ mb-4 fst-italic">L'Université Paris-Saclay est membre des réseaux LERU, CESAER et EUA
-            </p>
-
         </div>
     </section>
 
-    <div class="text-center p-4 text-white" style="background-color: #1b1b1b;">
-        Tous droits réservés Université Paris-Saclay || Designed by:
-        <a class="text-reset fw-bold" href="https://paradisiak.com/" target="_blank">Paradisiak <?= date('Y'); ?></a>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="texte-univ mb-5">L'Université Paris-Saclay est membre des réseaux
+                    <a href="https://www.leru.org/" target="_blank" class="text-white text-decoration-underline">
+                        LERU</a>,
+                    <a href="https://www.cesaer.org/" target="_blank"
+                        class="text-white text-decoration-underline">CESAER</a> et
+                    <a href="https://eua.eu/" target="_blank" class="text-white text-decoration-underline">EUA</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3 text-white" style="background-color: #1b1b1b;">
+        Tous droits réservés Université Paris-Saclay <?= date('Y'); ?> || Designed by:
+        <a class="text-reset fw-bold" href="https://paradisiak.com/" target="_blank">Paradisiak</a>
     </div>
 </footer>
 
