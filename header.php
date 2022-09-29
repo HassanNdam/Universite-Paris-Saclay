@@ -36,6 +36,8 @@
     $jobbody = get_post_custom_values('job_body')[0];
     $jobbranch = get_post_custom_values('job_branch')[0];
     $joblink = get_post_custom_values('job_link')[0];
+    $jobaddress =  get_post_custom_values('job_address')[0]; 
+    $job_town =  get_post_custom_values('job_town')[0]; 
 
     ?>
 
