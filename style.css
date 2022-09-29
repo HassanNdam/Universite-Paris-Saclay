@@ -371,17 +371,19 @@ option {
 
 
 .page-item.active .page-link {
-    background-color: #8B1B59;
+    background-color: #224667;
     border-color: #D7D7D7;
     color: #f1f1f1;
     opacity: 1;
+    width: 40px; 
+    height: 40px;
 }
 
 
 .page-link {
     color: rgb(255, 255, 255);
     background-color: #8B1B59;
-    padding: 10px;
+    /* padding: 10px; */
     transition: 1s all;
 }
 
@@ -396,6 +398,7 @@ option {
     outline: none !important;
     box-shadow: none !important;
     color: #000000;
+    background-color: #224667;
 }
 
 .page-item:not(:first-child) .page-link {
@@ -488,6 +491,7 @@ footer a:hover {
 
 .texte-univ {
     font-weight: 700;
+    margin-left: 2.125em;
 }
 
 footer .fa-brands {
@@ -503,4 +507,11 @@ footer a .fa-brands {
 footer a .fa-brands:hover {
     color: #8B1B59;
     transition: 0.3s all;
+}
+
+@media  (max-width:768px) {
+.texte-univ{
+    margin-left: 0em;
+}
+    
 }
