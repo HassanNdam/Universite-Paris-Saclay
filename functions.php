@@ -155,14 +155,15 @@ if (! function_exists('pagination_post')) {
 function replace_text_wps($text)
 {
     $replace = array(
-        '<h3>Entreprise</h3>' => '<h3>Employeur</h3>',
-        '<h3>Poste</h3>' => '<h3>Mission</h3>',
-        '<h3>Profil</h3>' => '<h3>Profil</h3>',
+        '<h3>Entreprise</h3>' => '<h3>Empssloyeur</h3>',
+        '<h3>Poste</h3>' => '<h3>Missssion</h3>',
+        '<h3>Profil</h3>' => '<h3>Prssofil</h3>',
     );
     $text = str_replace(array_keys($replace), $replace, $text);
 
     return $text;
 }
+add_filter('the_content', 'replace_text_wps');
 
 
 function change_icone_categorie($icone_category)
@@ -245,13 +246,13 @@ if ($switch == 1) {
 
 //Function to display the elements on the select (via search form)
 
-function select_search_value( $list = array()){
+function select_search_value( $list = array(), $compare_value){
     $size_const = count($list); 
     $i = 0; 
     while($i < $size_const) : 
         foreach($list as $element):                                        
             echo("<option value='" . ($i + 1) . "'");
-            if($category_value == $i + 1) {
+            if($compare_value == $i + 1) {
                 echo(" selected='selected'");
             }
             echo(">" . $element. "</option>");
