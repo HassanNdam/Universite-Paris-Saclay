@@ -229,7 +229,7 @@ if ($switch == 1) {
             case 'CACHAN': 
         ?>
 
-<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan - offre d'emploi"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Cachan.jpg'; ?>" alt="Cachan - offre d'emploi"
     class="img-fluid" width="100%">
 
 <?php
