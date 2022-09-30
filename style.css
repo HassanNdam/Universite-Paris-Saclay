@@ -107,10 +107,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: "OpenSansSemiBold";
-
+    overflow-x: hidden;
 }
 
-p{
+p {
     text-align: justify;
 }
 
@@ -209,8 +209,10 @@ a:hover {
 }
 
 #site-header .btn-close {
-    color: #f1f1f1;
-
+    background:url(assets/icone/close.svg);
+    opacity: .5;
+    height: 0.4em;
+    width: 0.4em;
 }
 
 /* Header Sites variation*/
@@ -220,7 +222,7 @@ a:hover {
     text-transform: uppercase;
     color: #000000;
     font-weight: 900;
-    font-size: large;
+    font-size: 1.2em;
 }
 
 
@@ -228,14 +230,14 @@ a:hover {
 
 
 .header-image-home {
-    background-image: url(assets/images/general2.jpg);
-    height: 350px;
+    background-image: url(assets/images/header_home.png);
+    height: 400px;
     background-position: center;
     background-size: cover;
 }
 
 .header-job-search {
-    background-image: url(assets/images/header-image.png);
+    background-image: url(assets/images/header_search.png);
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -327,7 +329,7 @@ option {
 /* 404 page */
 
 
-.text-404{
+.text-404 {
     font-size: 10em;
 }
 
@@ -365,28 +367,37 @@ option {
     transition: .8ms all;
 }
 
-
+@media screen and (max-width:768px) {
+    .btn-offre{
+        margin-bottom: 1em;
+    }
+    
+}
 
 /* Pagination */
 
 
 .page-item.active .page-link {
-    background-color: #8B1B59;
+    background-color: #224667;
     border-color: #D7D7D7;
     color: #f1f1f1;
     opacity: 1;
+    width: 40px; 
+    height: 40px;
 }
 
 
 .page-link {
-    color: black;
-    border: 1px solid #D7D7D7;
-    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #8B1B59;
+    /* padding: 10px; */
+    transition: 1s all;
 }
 
 .page-link:hover {
     color: #000000;
     text-decoration: none;
+    transition: 1s all;
 }
 
 .page-link:focus,
@@ -394,16 +405,29 @@ option {
     outline: none !important;
     box-shadow: none !important;
     color: #000000;
+    background-color: #224667;
 }
 
+.page-item:not(:first-child) .page-link {
+    margin-left: 1px;
+}
 
+.page-item:first-child .page-link {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
 /* Page Poste  & Media Queries*/
 
 .header-image-post {
     background-position: center;
     background-size: cover;
-    height: 420px;
+    height: 450px;
 }
 
 .breadcrumb {
@@ -437,6 +461,12 @@ option {
     display: none;
 }
 
+.border-right{
+    border-right : 5px solid #8B1B59;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 @media screen and (max-width:768px) {
     .header-image-post {
         height: 200px;
@@ -468,6 +498,7 @@ footer a:hover {
 
 .texte-univ {
     font-weight: 700;
+    margin-left: 2.125em;
 }
 
 footer .fa-brands {
@@ -483,4 +514,11 @@ footer a .fa-brands {
 footer a .fa-brands:hover {
     color: #8B1B59;
     transition: 0.3s all;
+}
+
+@media  (max-width:768px) {
+.texte-univ{
+    margin-left: 0em;
+}
+    
 }

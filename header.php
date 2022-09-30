@@ -19,7 +19,7 @@
         sizes="16x16 32x32 48x48 64x64">
 
     <?php
-    include_once("data/inc-data-form.php");
+    include("template-part/inc-data-form.php");
     wp_head();
     ?>
 
@@ -36,6 +36,8 @@
     $jobbody = get_post_custom_values('job_body')[0];
     $jobbranch = get_post_custom_values('job_branch')[0];
     $joblink = get_post_custom_values('job_link')[0];
+    $jobaddress =  get_post_custom_values('job_address')[0]; 
+    $job_town =  get_post_custom_values('job_town')[0]; 
 
     ?>
 
@@ -46,18 +48,18 @@
             <div class="row align-items-center d-flex">
                 <div class="col-lg-6 col-sm-12">
                     <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(). '/assets/logo/logo.png'?>"
+                        <img src="<?php echo get_template_directory_uri(). '/assets/logo/logo_final.png'?>"
                             alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
                     </a>
                 </div>
 
                 <!-- Show title on the front page -->
 
-                <?php if (is_front_page()): ?>
-                <div class="col-lg-6 col-sm-12 text-center">
+                <!-- <?php if (is_front_page()): ?> -->
+                <!-- <div class="col-lg-6 col-sm-12 text-center">
                     <span class="header-text-site text-muted">Recrutement</span>
-                </div>
-                <?php else: endif;?>
+                </div> -->
+                <!-- <?php else: endif;?> -->
             </div>
             <div class="text-center mt-4 mt-md-0">
 
@@ -106,7 +108,7 @@
                 <a href="https://jobaffinity.fr/apply/zpmce5gaejoh4tzlip" target="_blank" class="">
                     <button type="button" class="btn btn-primary espace-buton-center" onclick="this.blur();">
                         Candidature spontanée</button>
-                </a>
+                </a>   
             </div>
         </nav>
     </header>

@@ -155,7 +155,7 @@ if (! function_exists('pagination_post')) {
 function replace_text_wps($text)
 {
     $replace = array(
-        '<h3>Entreprise</h3>' => '<h3>Employeur</h3>',
+        '<h3>Entreprise</h3>' => '<h3></h3>',
         '<h3>Poste</h3>' => '<h3>Mission</h3>',
         '<h3>Profil</h3>' => '<h3>Profil</h3>',
     );
@@ -163,6 +163,7 @@ function replace_text_wps($text)
 
     return $text;
 }
+add_filter('the_content', 'replace_text_wps');
 
 
 function change_icone_categorie($icone_category)
@@ -198,7 +199,7 @@ function image_post_change_location($image_location)
     switch ($image_location) {
             case 'Sceaux':
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux-faculte.jpg'; ?>"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux_faculte.png'; ?>"
     alt="Sceaux faculté - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
@@ -206,12 +207,12 @@ function image_post_change_location($image_location)
                 $switch = rand(1,2); 
 if ($switch == 1) {
     ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/ORSAY.png'; ?>" alt="Orsay Ville - offre d'emploi"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/PARIS-ORSAY.png'; ?>" alt="Orsay Ville - offre d'emploi"
     class="img-fluid" width="100%">
 <?php
 } else{ 
 ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau1.jpg'; ?>"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau.png'; ?>"
     alt="Orsay Plateau - offre d'emploi" class="img-fluid" width="100%">
 <?php 
 } //Endif
@@ -221,21 +222,21 @@ if ($switch == 1) {
             break;
             case 'GIF-SUR-IVETTES': 
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Gif-Sur-Yvettes.png'; ?>"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Gifsuryvettes.png'; ?>"
     alt="Gif-Sur-Yvettes - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
             case 'CACHAN': 
         ?>
 
-<img src="<?php echo get_template_directory_uri(). '/assets/images/IUT-Cachan.jpg'; ?>" alt="Cachan - offre d'emploi"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/Cachan_site.png'; ?>" alt="Cachan - offre d'emploi"
     class="img-fluid" width="100%">
 
 <?php
             break;
             default:
         ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Orsay.png'; ?>" alt="ORSAY - offre d'emploi"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/PARIS-ORSAY.png'; ?>" alt="ORSAY - offre d'emploi"
     class="img-fluid" width="100%">
 <?php
             break;
@@ -245,13 +246,12 @@ if ($switch == 1) {
 
 //Function to display the elements on the select (via search form)
 
-function select_search_value( $list = array()){
-    $size_const = count($list); 
+function select_search_value( $list = array(), $compare_value){
     $i = 0; 
-    while($i < $size_const) : 
+    while($i < count($list)) : 
         foreach($list as $element):                                        
             echo("<option value='" . ($i + 1) . "'");
-            if($category_value == $i + 1) {
+            if($compare_value == $i + 1) {
                 echo(" selected='selected'");
             }
             echo(">" . $element. "</option>");
