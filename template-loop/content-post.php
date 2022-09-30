@@ -35,7 +35,7 @@ $jobtown =  get_post_custom_values('job_town')[0];
         <div class="col-md-8">
             <div class="row mb-2">
                 <div class="row g-0 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col-md-12 p-4 flex-column position-static text-justify">
+                    <div class="col-md-12 p-4 flex-column position-static text-justify text-muted">
                         <?php the_content(); ?>
                     </div>
                     <div class="text-center mb-5">
@@ -56,33 +56,33 @@ $jobtown =  get_post_custom_values('job_town')[0];
 
                     <div class="col-lg-12 text-start shadow-sm p-4 border-right ">
                         <div class="col">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i> <span
-                                class="text-muted fst-italic"><?php echo 'Publiée le ' . get_the_date(); ?></span>
+                            <i class="fa fa-clock-o text-muted" aria-hidden="true"></i> <span
+                                class="fst-italic text-muted"><?php echo 'Publiée le ' . get_the_date(); ?></span>
                         </div>
                         <hr>
                         <div class="col mt-4">
-                            <i class="fa-sharp fa-solid fa-address-card"></i><span class="text-muted">
+                            <i class="fa-sharp fa-solid fa-address-card text-muted"></i><span class="">
                                 <?php echo $jobcontract; ?>
                             </span>
                         </div>
                         <hr>
                         <div class="col mt-4">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i> <span
-                                class="text-muted"><?php echo $joblocation == NULL ? 'PARIS-SACLAY': $joblocation;  ?>
+                            <i class="fa fa-map-marker text-muted" aria-hidden="true"></i> <span
+                                class=""><?php echo $joblocation == NULL ? 'PARIS-SACLAY': $joblocation;  ?>
                             </span>
                         </div>
                         <?php if($jobbranch != null) : ?>
                         <hr>
                         <div class="col mt-4">
-                            <i class="fa-solid fa-calendar-days"></i> <span
-                                class="text-muted"><?php echo $jobbranch;  ?>
+                            <i class="fa-solid fa-calendar-days text-muted"></i> <span
+                                class=""><?php echo $jobbranch;  ?>
                             </span>
                         </div>
                         <?php else: endif; ?>
                         <?php if($jobbody != null) : ?>
                         <hr>
                         <div class="col mt-4">
-                            <i class="fa-solid fa-briefcase"></i> <span class="text-muted"><?php echo $jobbody;  ?>
+                            <i class="fa-solid fa-briefcase text-muted"></i> <span class=""><?php echo $jobbody;  ?>
                             </span>
                         </div>
                         <?php else: endif; ?>
