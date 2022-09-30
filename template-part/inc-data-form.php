@@ -14,6 +14,7 @@ define("JOBCONTRACT", [
   "Titulaire de la fonction publique",
   "Titulaire de la fonction publique ou CDD",
   "CDD",
+  "CDD uniquement",
   "CDI",
   "Interim",
   "Stage",
