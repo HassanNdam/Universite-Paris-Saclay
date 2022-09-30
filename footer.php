@@ -7,7 +7,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
                     <a href="https://www.universite-paris-saclay.fr/" target="_blank">
                         <img class="img-fluid"
-                            src="<?php echo(get_template_directory_uri() . '/assets/logo/logo-ups-white_1.svg') ?>"
+                            src="<?php echo(get_template_directory_uri() . '/assets/logo/logo_footer.svg') ?>"
                             alt="Logo Université PARIS-SACLAY" width="190">
                     </a>
                     <p class="mt-5">3 rue Joliot Curie
