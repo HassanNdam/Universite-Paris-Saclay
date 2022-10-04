@@ -606,7 +606,7 @@ a.col-2.sbtn.s-buffer:hover {
 .header-image-post {
     background-position: center;
     background-size: cover;
-    height: 450px;
+    /* height: 450px; */
 }
 
 .breadcrumb {

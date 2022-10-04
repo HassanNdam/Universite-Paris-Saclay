@@ -68,7 +68,7 @@ $jobtown =  get_post_custom_values('job_town')[0];
                         <hr>
                         <div class="col mt-4">
                             <i class="fa fa-map-marker text-muted" aria-hidden="true"></i> <span
-                                class=""><?php echo $joblocation == NULL ? 'PARIS-SACLAY': $joblocation;  ?>
+                                class=""><?php echo $jobtown == NULL ? 'PARIS-SACLAY': $jobtown;  ?>
                             </span>
                         </div>
                         <?php if($jobbranch != null) : ?>

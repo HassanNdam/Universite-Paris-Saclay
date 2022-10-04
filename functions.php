@@ -203,7 +203,7 @@ function image_post_change_location($image_location)
     alt="Sceaux faculté - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
-            case 'ORSAY':
+            case 'Orsay':
                 $switch = rand(1,2); 
 if ($switch == 1) {
     ?>
@@ -220,13 +220,13 @@ if ($switch == 1) {
 
 <?php 
             break;
-            case 'GIF-SUR-IVETTES': 
+            case 'Gif-sur-Yvette': 
             ?>
 <img src="<?php echo get_template_directory_uri(). '/assets/images/Gifsuryvettes.png'; ?>"
     alt="Gif-Sur-Yvettes - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
-            case 'CACHAN': 
+            case 'Cachan': 
         ?>
 
 <img src="<?php echo get_template_directory_uri(). '/assets/images/Cachan_site.png'; ?>" alt="Cachan - offre d'emploi"

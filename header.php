@@ -37,7 +37,7 @@
     $jobbranch = get_post_custom_values('job_branch')[0];
     $joblink = get_post_custom_values('job_link')[0];
     $jobaddress =  get_post_custom_values('job_address')[0]; 
-    $job_town =  get_post_custom_values('job_town')[0]; 
+    $jobtown =  get_post_custom_values('job_town')[0]; 
 
     ?>
 
@@ -128,7 +128,7 @@ if (is_front_page()) :
 elseif(is_single()):
     ?>
     <div class="position-relative  overflow-hidden header-image-post">
-        <?php    image_post_change_location($joblocation); ?>
+        <?php    image_post_change_location($jobtown); ?>
 
     </div>
     <?php

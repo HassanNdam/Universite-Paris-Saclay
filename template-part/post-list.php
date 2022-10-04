@@ -18,7 +18,7 @@ if(have_posts()) :
         $jobbranch = get_post_custom_values('custom_bap')[0];
         $joblink = get_post_custom_values('job_link')[0];
         $jobaddress =  get_post_custom_values('job_address')[0]; 
-        $job_town =  get_post_custom_values('job_town')[0]; 
+        $jobtown =  get_post_custom_values('job_town')[0]; 
 
         $post_title = get_the_title($post);
 
@@ -36,7 +36,7 @@ if(have_posts()) :
                         <div class="row gx-3 mb-3">
                             <div class="col-lg-6">
                                 <i class="fa fa-map-marker text-muted" aria-hidden="true"></i>
-                                <?php  echo $joblocation == null ? 'PARIS-SACLAY' : $joblocation;  ?>
+                                <?php  echo $jobtown == null ? 'PARIS-SACLAY' : $jobtown;  ?>
                             </div>
                             <div class="col-lg-6">
                                 <i class="fa-sharp fa-solid fa-address-card text-muted"></i> <?php echo $jobcontract; ?>
