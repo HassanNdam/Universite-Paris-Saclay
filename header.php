@@ -47,7 +47,7 @@
 
             <div class="row align-items-center d-flex">
                 <div class="col-lg-6 col-sm-12">
-                    <a class="navbar-brand" title="Aller sur la page d'accueil" href="<?php echo get_site_url(); ?>">
+                    <a class="navbar-brand" title="Aller sur la page d'accueil" href="https://www.universite-paris-saclay.fr/" target="_blank">
                         <img src="<?php echo get_template_directory_uri(). '/assets/logo/logo_final.png'?>"
                             alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
                     </a>
