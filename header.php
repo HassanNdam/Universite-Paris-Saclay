@@ -8,6 +8,7 @@
     <meta property="og:title" content="Université Paris-Saclay - Recrutement" />
     <meta property="og:description"
         content="Bienvenue sur le site de recrutement de l'Université PARIS-SACLAY. Vous pouvez soummetre les offres d'emploi sur cette page pour le poste qui vous intéressé." />
+    <meta property="og:image" content="<?php echo get_template_directory_uri(). '/assets/logo/paris-saclay.png'?>" />
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
     <meta property="og:type" content="website" />
@@ -22,7 +23,25 @@
     include("template-part/inc-data-form.php");
     wp_head();
     ?>
+    <script type="text/javascript">
+    //  Integrate Analytics Code Tracking 
 
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u = "https://stat.dsi.universite-paris-saclay.fr/";
+        _paq.push(['setTrackerUrl', u 'matomo.php']);
+        _paq.push(['setSiteId', '75']);
+        var d = document,
+            g = d.createElement('script'),
+            s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = u 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+    </script>
 </head>
 
 <body>
@@ -108,7 +127,7 @@
                 <a href="https://jobaffinity.fr/apply/zpmce5gaejoh4tzlip" target="_blank" class="">
                     <button type="button" class="btn btn-primary espace-buton-center" onclick="this.blur();">
                         Candidature spontanée</button>
-                </a>   
+                </a>
             </div>
         </nav>
     </header>
@@ -147,3 +166,15 @@ else:
     <?php
 endif;
     ?>
+
+
+<?php if($_GET) : ?>
+<div class="container mt-5 mb-5  bloc-fil-ariane">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i class="fa fa-home" aria-hidden="true"></i> <a
+                    href="<?php echo get_site_url();?>"> Revenir à l'Accueil</a></li>
+        </ol>
+    </nav>
+</div>
+<?php endif; ?> 
