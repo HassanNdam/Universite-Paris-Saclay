@@ -184,9 +184,9 @@ function change_icone_categorie($icone_category)
 function changement_couleur_permutation(int $color_change_post, string $post_title)
 {
     if ($color_change_post % 2 == 0) {
-        echo "<div class=\"col-md-12 p-3 text-white couleur1\">$post_title</div>";
+        echo "<div class=\"col-md-12 p-1 text-white couleur1\">$post_title</div>";
     } elseif ($color_change_post % 2 > 0) {
-        echo "<div class=\"col-md-12 p-3 s text-white couleur2 \">$post_title</div>";
+        echo "<div class=\"col-md-12 p-1 text-white couleur2 \">$post_title</div>";
     }
 }
 
