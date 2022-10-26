@@ -199,7 +199,7 @@ function image_post_change_location($image_location)
     switch ($image_location) {
             case 'Sceaux':
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Sceaux_faculte.png'; ?>"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/sceaux.png'; ?>"
     alt="Sceaux faculté - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
@@ -212,7 +212,7 @@ if ($switch == 1) {
 <?php
 } else{ 
 ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay-plateau.png'; ?>"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/orsay_plateau.png'; ?>"
     alt="Orsay Plateau - offre d'emploi" class="img-fluid" width="100%">
 <?php 
 } //Endif
@@ -222,14 +222,14 @@ if ($switch == 1) {
             break;
             case 'GIF-SUR-IVETTES': 
             ?>
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Gifsuryvettes.png'; ?>"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/gifsur_yvettes.png'; ?>"
     alt="Gif-Sur-Yvettes - offre d'emploi" class="img-fluid" width="100%">
 <?php
             break;
             case 'CACHAN': 
         ?>
 
-<img src="<?php echo get_template_directory_uri(). '/assets/images/Cachan_site.png'; ?>" alt="Cachan - offre d'emploi"
+<img src="<?php echo get_template_directory_uri(). '/assets/images/cachan.png'; ?>" alt="Cachan - offre d'emploi"
     class="img-fluid" width="100%">
 
 <?php

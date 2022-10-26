@@ -168,13 +168,13 @@ endif;
     ?>
 
 
-<?php if($_GET) : ?>
-<div class="container mt-5 mb-5  bloc-fil-ariane">
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="fa fa-home" aria-hidden="true"></i> <a
-                    href="<?php echo get_site_url();?>"> Revenir à l'Accueil</a></li>
-        </ol>
-    </nav>
-</div>
-<?php endif; ?> 
+    <?php if($_GET) : ?>
+    <div class="container mt-5 mb-5  bloc-fil-ariane">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><i class="fa fa-home" aria-hidden="true"></i> <a
+                        href="<?php echo get_site_url();?>"> Revenir à l'Accueil</a></li>
+            </ol>
+        </nav>
+    </div>
+    <?php endif; ?>
