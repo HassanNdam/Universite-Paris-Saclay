@@ -1,6 +1,6 @@
 <!-- Footer -->
 
-<footer class="text-center mt-5 pt-3 border-top text-lg-start">
+<footer class="text-center mt-5 border-top text-lg-start">
     <section class="pb-1 p-3">
         <div class="container text-center text-md-start mt-5">
             <div class="row mt-3">
