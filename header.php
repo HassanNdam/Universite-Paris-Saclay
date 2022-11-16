@@ -66,20 +66,20 @@
 
             <div class="row align-items-center d-flex">
                 <div class="col-lg-6 col-sm-12">
-                    <a class="navbar-brand" title="Aller sur le site de l'université PARIS-SACLAY" href="https://www.universite-paris-saclay.fr/" target="_blank">
+                    <a class="navbar-brand" title="Aller sur le site de l'université PARIS-SACLAY"
+                        href="https://www.universite-paris-saclay.fr/" target="_blank">
                         <img src="<?php echo get_template_directory_uri(). '/assets/logo/logo_final.png'?>"
                             alt="Logo Université Paris-Saclay" style="max-width:250px" class="img-fluid">
                     </a>
                 </div>
-
-                <!-- Show title on the front page -->
-
-                <!-- <?php if (is_front_page()): ?> -->
-                <!-- <div class="col-lg-6 col-sm-12 text-center">
-                    <span class="header-text-site text-muted">Recrutement</span>
-                </div> -->
-                <!-- <?php else: endif;?> -->
             </div>
+
+            <!-- Middle text -->
+
+            <div class="text-center d-flex">
+                <span class="text-muted mt-2 hire-text-university">L'Université Paris Saclay Recrute.</span>
+            </div>
+
             <div class="text-center mt-4 mt-md-0">
 
                 <!-- Button mobilité interne -->

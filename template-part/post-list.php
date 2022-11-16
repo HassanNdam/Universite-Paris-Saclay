@@ -25,10 +25,10 @@ if(have_posts()) :
         ?>
 
             <div class="row mb-2 ">
-                <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 border overflow-hidden flex-md-row mb-3 shadow-sm h-md-250 position-relative">
 
                     <?php changement_couleur_permutation($post_number, $post_title);?>
-                    <div class="col-md-9 p-4 flex-column position-static ">
+                    <div class="col-md-9 px-3 pt-3 pb-3 flex-column position-static ">
 
                         <div class="mb-3 text-muted fst-italic">
                             Publié le <?php echo get_the_date(); ?>

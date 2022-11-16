@@ -164,6 +164,15 @@ a:hover {
     padding: 0.7em;
 }
 
+@media screen and (max-width:768px) {
+
+    body,
+    .btn {
+        font-size: 0.9em;
+    }
+}
+
+
 .espace-buton-center {
     margin-top: 0.094em;
 }
@@ -209,20 +218,15 @@ a:hover {
 }
 
 #site-header .btn-close {
-    background:url(assets/icone/close.svg);
+    background: url(assets/icone/close.svg);
     opacity: .5;
     height: 0.4em;
     width: 0.4em;
 }
 
-/* Header Sites variation*/
-
-#site-header .header-text-site {
-    font-family: 'OpenSansBold';
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: 900;
-    font-size: 1.2em;
+.hire-text-university {
+    font-weight: 600;
+    font-size: 1.5em;
 }
 
 
@@ -251,7 +255,6 @@ a:hover {
 .header-job-search .fa-arrow-down {
     font-size: 1.5em;
 }
-
 
 /* Moteur de recherche / Filtre & Queries */
 
@@ -368,10 +371,10 @@ option {
 }
 
 @media screen and (max-width:768px) {
-    .btn-offre{
+    .btn-offre {
         margin-bottom: 1em;
     }
-    
+
 }
 
 /* Pagination */
@@ -382,7 +385,7 @@ option {
     border-color: #D7D7D7;
     color: #f1f1f1;
     opacity: 1;
-    width: 40px; 
+    width: 40px;
     height: 40px;
 }
 
@@ -461,8 +464,8 @@ option {
     display: none;
 }
 
-.border-right{
-    border-right : 5px solid #8B1B59;
+.border-right {
+    border-right: 5px solid #8B1B59;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -516,9 +519,9 @@ footer a .fa-brands:hover {
     transition: 0.3s all;
 }
 
-@media  (max-width:768px) {
-.texte-univ{
-    margin-left: 0em;
-}
-    
+@media (max-width:768px) {
+    .texte-univ {
+        margin-left: 0em;
+    }
+
 }
